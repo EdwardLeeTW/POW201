@@ -22,6 +22,8 @@
         <itemPath>mcc_generated_files/clock.h</itemPath>
         <itemPath>mcc_generated_files/watchdog.h</itemPath>
         <itemPath>mcc_generated_files/system_types.h</itemPath>
+        <itemPath>mcc_generated_files/slave1.h</itemPath>
+        <itemPath>mcc_generated_files/slave_typedef.h</itemPath>
       </logicalFolder>
       <logicalFolder name="os" displayName="os" projectFiles="true">
         <itemPath>sources/os/os_timer.h</itemPath>
@@ -51,6 +53,7 @@
         <itemPath>mcc_generated_files/adc1.c</itemPath>
         <itemPath>mcc_generated_files/system.c</itemPath>
         <itemPath>mcc_generated_files/reset.c</itemPath>
+        <itemPath>mcc_generated_files/slave1.c</itemPath>
       </logicalFolder>
       <logicalFolder name="os" displayName="os" projectFiles="true">
         <itemPath>sources/os/os_scheduler_100us.c</itemPath>
@@ -104,6 +107,29 @@
           <alternateLoadableFile></alternateLoadableFile>
         </loading>
         <subordinates>
+          <sproject>
+            <makeArtifact PL="../POW201_Slave.X"
+                          CT="1"
+                          CN="default"
+                          AC="true"
+                          BL="true"
+                          WD="../POW201_Slave.X"
+                          BC="${MAKE}  -f Makefile CONF=default"
+                          DBC="${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN"
+                          CC="rm -rf &quot;build/default&quot; &quot;dist/default&quot;"
+                          OP="dist/default/production/POW201_Slave.X.production.hex"
+                          DOP="dist/default/debug/POW201_Slave.X.debug.elf"
+                          FL="dist/default/production/POW201_Slave.X.production.hex"
+                          PD="dist/default/production/POW201_Slave.X.production.elf"
+                          DD="dist/default/debug/POW201_Slave.X.debug.elf">
+            </makeArtifact>
+            <simage>POW201_Slave</simage>
+            <saddress></saddress>
+          </sproject>
+          <score>
+            <scdebug>false</scdebug>
+            <scname>S1</scname>
+          </score>
         </subordinates>
       </compileType>
       <makeCustomizationType>
@@ -262,15 +288,15 @@
         <property key="memories.eeprom" value="true"/>
         <property key="memories.id" value="true"/>
         <property key="memories.programmemory" value="true"/>
-        <property key="memories.programmemory.ranges" value="0-ffffffffffffffff"/>
+        <property key="memories.programmemory.ranges" value="0-57eff"/>
         <property key="memories.userotp" value="true"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges" value=""/>
+        <property key="programoptions.preservedataflash.ranges"
+                  value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
-        <property key="programoptions.preserveeeprom.ranges"
-                  value="${memories.eedata.default}"/>
+        <property key="programoptions.preserveeeprom.ranges" value=""/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.usehighvoltageonmclr" value="false"/>
@@ -309,11 +335,13 @@
         <property key="SENT2" value="true"/>
         <property key="SPI 1" value="true"/>
         <property key="SPI 2" value="true"/>
+        <property key="SecureSegment.SegmentProgramming" value="FullChipProgramming"/>
         <property key="TIMER1" value="true"/>
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
         <property key="ToolFirmwareOption.UpdateOptions"
                   value="ToolFirmwareOption.UseLatest"/>
+        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
         <property key="ToolFirmwareToolPack"
                   value="Press to select which tool pack to use"/>
         <property key="communication.interface" value=""/>
@@ -340,6 +368,7 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-57eff"/>
+        <property key="memories.userotp" value="true"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -356,6 +385,8 @@
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
+        <property key="programoptions.usehighvoltageonmclr" value="false"/>
+        <property key="programoptions.uselvpprogramming" value="true"/>
         <property key="toolpack.updateoptions"
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
