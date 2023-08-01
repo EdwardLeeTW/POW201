@@ -46,6 +46,7 @@
   Section: Included Files
 */
 #include "mcc_generated_files/system.h"
+#include "mcc_generated_files/slave1.h"
 #include "sources/os/os.h"
 
 /*
@@ -55,6 +56,10 @@ int main(void)
 {
     // initialize the device
     SYSTEM_Initialize();
+    
+    //Program and enable slave
+    SLAVE1_Program();
+    SLAVE1_Start();
     
     // OS
     OS_Init();

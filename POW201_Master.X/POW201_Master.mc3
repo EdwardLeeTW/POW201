@@ -38980,14 +38980,6 @@
          <value>ON</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE1" name="RC13"/>
-         <value>output</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE1" name="RE0"/>
-         <value>output</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SLAVE1" name="SLV1_RA0"/>
          <value>disabled</value>
       </entry>
@@ -41314,12 +41306,12 @@
          <hash>18fc94d08b5f7e3b968046be94bee85196540d262f4ce32350e1c56817120bfb</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/reset.h</file>
-         <hash>b7da387294b1aa31c55d8863fc4fdffb3ce7a1b415ce483755360260d98661ae</hash>
+         <file>mcc_generated_files/system.c</file>
+         <hash>f15df6dd246181edbc33ed25b31a20835b59d63777ade7dacd955d5d6a2ac6b2</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/system.c</file>
-         <hash>a19adcfa29381c579be21ee81b81f5080c7ca9c0171a832a68033f38d4692d46</hash>
+         <file>mcc_generated_files/reset.h</file>
+         <hash>b7da387294b1aa31c55d8863fc4fdffb3ce7a1b415ce483755360260d98661ae</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/clock.h</file>
@@ -41355,7 +41347,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
-         <hash>bc941465f5cabbc64a99a37b6b2eaf177df2c2bdca56c18add92c959d5044db8</hash>
+         <hash>1af8d8b3383aa171b1b070f69114e097c88e892897b36f6434fca195bf20dcf4</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/interrupt_manager.c</file>
@@ -41378,12 +41370,12 @@
          <hash>762e08a0b9820c7e9c8a00f9f1615122c98a8cd68f14bca7fc8e3be4b86728b8</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/pin_manager.h</file>
-         <hash>ad38f1b5374a510a2989e25e387a1a19462ee79375424af79a7f39d098d038b2</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/slave1.c</file>
          <hash>3115bf464b08d88905bc06c6194e4ae4fad5c550dc308f76ab7f609b63129d7e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/pin_manager.h</file>
+         <hash>ad38f1b5374a510a2989e25e387a1a19462ee79375424af79a7f39d098d038b2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr1.c</file>
