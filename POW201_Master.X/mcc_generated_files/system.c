@@ -152,7 +152,7 @@
 #pragma config CPRC11 = MSTR    //Pin RC11 Ownership Bits->Main core owns pin.
 #pragma config CPRC12 = MSTR    //Pin RC12 Ownership Bits->Main core owns pin.
 #pragma config CPRC13 = MSTR    //Pin RC13 Ownership Bits->Main core owns pin.
-#pragma config CPRC14 = MSTR    //Pin RC14 Ownership Bits->Main core owns pin.
+#pragma config CPRC14 = SLV1    //Pin RC14 Ownership Bits->Secondary core owns pin.
 #pragma config CPRC15 = MSTR    //Pin RC15 Ownership Bits->Main core owns pin.
 
 // FCFGPRD0
@@ -175,7 +175,7 @@
 
 // FCFGPRE0
 #pragma config CPRE0 = MSTR    //Pin RE0 Ownership Bits->Main core owns pin.
-#pragma config CPRE1 = MSTR    //Pin RE1 Ownership Bits->Main core owns pin.
+#pragma config CPRE1 = SLV1    //Pin RE1 Ownership Bits->Secondary core owns pin.
 #pragma config CPRE2 = MSTR    //Pin RE2 Ownership Bits->Main core owns pin.
 #pragma config CPRE3 = MSTR    //Pin RE3 Ownership Bits->Main core owns pin.
 #pragma config CPRE4 = MSTR    //Pin RE4 Ownership Bits->Main core owns pin.
@@ -202,9 +202,9 @@
 #include "clock.h"
 #include "system.h"
 #include "system_types.h"
-#include "pwm.h"
-#include "tmr1.h"
 #include "adc1.h"
+#include "tmr1.h"
+#include "pwm.h"
 #include "slave_typedef.h"
 #include "slave1.h"
 #include "interrupt_manager.h"
