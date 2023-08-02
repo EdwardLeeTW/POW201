@@ -6,7 +6,7 @@
 ## dsPIC33CH CURIOSITY DEVELOPMENT BOARD
 Part Number: DM330028-2
 
-![image](https://www.microchip.com/content/dam/mchp/mrt-dam/devtools/2851-181130-mcu16-dm330028-2-640.jpg) 
+[![image](https://www.microchip.com/content/dam/mchp/mrt-dam/devtools/2851-181130-mcu16-dm330028-2-640.jpg) ](https://github.com/EdwardLeeTW/POW201)
 
 ## Summary
 
