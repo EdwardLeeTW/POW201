@@ -188,8 +188,8 @@ void ADC1_Initialize (void)
     // Enabling Power for the Shared Core
     ADC1_SharedCorePowerEnable();
 
-    //TRGSRC0 Master PWM2 Trigger1; TRGSRC1 None; 
-    ADTRIG0L = 0x06;
+    //TRGSRC0 Master PWM4 Trigger1; TRGSRC1 None; 
+    ADTRIG0L = 0x0A;
     //TRGSRC3 None; TRGSRC2 None; 
     ADTRIG0H = 0x00;
     //TRGSRC4 None; TRGSRC5 None; 

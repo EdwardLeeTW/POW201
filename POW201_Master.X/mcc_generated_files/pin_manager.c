@@ -72,7 +72,7 @@ void PIN_MANAGER_Initialize (void)
      ***************************************************************************/
     TRISA = 0x001F;
     TRISB = 0xDFFD;
-    TRISC = 0x9FFF;
+    TRISC = 0x9FDF;
     TRISD = 0xFFFF;
     TRISE = 0xFFFC;
 
@@ -107,5 +107,14 @@ void PIN_MANAGER_Initialize (void)
     ANSELC = 0x00CF;
     ANSELD = 0x7C00;
     ANSELE = 0x0040;
+    
+    /****************************************************************************
+     * Set the PPS
+     ***************************************************************************/
+    __builtin_write_RPCON(0x0000); // unlock PPS
+
+    RPOR10bits.RP53R = 0x0022;    //RC5->PWM:PWM4H
+
+    __builtin_write_RPCON(0x0800); // lock PPS
 }
 
