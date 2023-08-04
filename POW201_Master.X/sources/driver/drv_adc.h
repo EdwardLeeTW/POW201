@@ -5,6 +5,5 @@
 #include <stdbool.h>
 
 
-
 #endif  // _OS_TIMER_H_
 
