@@ -24525,7 +24525,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG4IOCONH"/>
-         <value>28</value>
+         <value>24</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="PWM" registerAlias="PG4IOCONL"/>
@@ -26941,7 +26941,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG4IOCONH" settingAlias="PENL"/>
-         <value>enabled</value>
+         <value>disabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="PWM" registerAlias="PG4IOCONH" settingAlias="PMOD"/>
@@ -41298,12 +41298,12 @@
          <hash>3f7cc64e367a09bcca9709a36d75f89ddf78cf7fe61ab098621f2a8a5e3e6b3c</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/reset.c</file>
-         <hash>8207eefe5915dd2c7bd531980b206709fbaa5d3a7c70e10e26aed208db1c2c55</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/slave_typedef.h</file>
          <hash>18fc94d08b5f7e3b968046be94bee85196540d262f4ce32350e1c56817120bfb</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/reset.c</file>
+         <hash>8207eefe5915dd2c7bd531980b206709fbaa5d3a7c70e10e26aed208db1c2c55</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/reset.h</file>
@@ -41311,7 +41311,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/system.c</file>
-         <hash>daf7be9eab79879ab0344472fde6433971b4d735160b1dd3a922ee8e4d0a08a3</hash>
+         <hash>f5fa9de719935621364d748d79aeeb89271998842ce147ab8464cf5bd4f4b3fe</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/clock.h</file>
@@ -41319,7 +41319,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/pwm.c</file>
-         <hash>19ecd434bd1e7b8209b29b02cf25547fb899b068ec693575a12b1ef92bf0c0e7</hash>
+         <hash>901deeefa1f1f19e68aa50d9eff0d8d9770c75e4ed91fd6bd60f07e211000890</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/pwm.h</file>
@@ -41347,7 +41347,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files/mcc.h</file>
-         <hash>d8b26cd225f593cf8b464de0a19f20433626fa0266c8bf364444e01d85584523</hash>
+         <hash>687b908a4eecd390b3bd07da06fd7e919003e2abc36919ad7b98ae2dd6a79e8a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/interrupt_manager.c</file>
@@ -41370,12 +41370,12 @@
          <hash>762e08a0b9820c7e9c8a00f9f1615122c98a8cd68f14bca7fc8e3be4b86728b8</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files/pin_manager.h</file>
-         <hash>ad38f1b5374a510a2989e25e387a1a19462ee79375424af79a7f39d098d038b2</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files/slave1.c</file>
          <hash>3115bf464b08d88905bc06c6194e4ae4fad5c550dc308f76ab7f609b63129d7e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files/pin_manager.h</file>
+         <hash>ad38f1b5374a510a2989e25e387a1a19462ee79375424af79a7f39d098d038b2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files/tmr1.c</file>
