@@ -132,8 +132,8 @@ void PWM_Initialize (void)
     PG7LEBH = 0x00;
     // PHASE 0; 
     PG7PHASE = 0x00;
-    // DC 6400; 
-    PG7DC = 0x1900;
+    // DC 0; 
+    PG7DC = 0x00;
     // DCA 0; 
     PG7DCA = 0x00;
     // PER 15992; 
