@@ -36,7 +36,7 @@
 volatile uint16_t VCOMP_ControlObject_Initialize(void)
 {
     volatile uint16_t retval = 0;                 // Auxiliary variable for function call verification (initially set to ZERO = false)
-
+    Buck_Vref = 0;
     /* Controller Input and Output Ports Configuration */
 
      // Configure Controller Primary Input Port
@@ -102,8 +102,8 @@ void __attribute__((__interrupt__, auto_psv)) _ADCAN13Interrupt(void)
 {
     //LED2_SetHigh();
     
-    VCOMP_Update(&VCOMP);               // Call control loop
-    //VCOMP_PTermUpdate(&VCOMP);        // Call P-Term control loop
+    //VCOMP_Update(&VCOMP);               // Call control loop
+    VCOMP_PTermUpdate(&VCOMP);        // Call P-Term control loop
     
     //LED2_SetLow();
     IFS6bits.ADCAN13IF = 0;             // Clear the interrupt flag
