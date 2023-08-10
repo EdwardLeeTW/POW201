@@ -45,6 +45,8 @@
 #include "mcc_generated_files/system.h"
 #include "mcc_generated_files/pin_manager.h"
 
+#include "BuckConverter.h"
+
 //=======================================================================================================
 //
 //                          put your application specific code in the following functions:
@@ -101,7 +103,7 @@ void Tasks_100us(void)
 //=======================================================================================================
 void Tasks_1ms(void)
 {
-
+    Buck_Softstart();
 }
 
 //=======================================================================================================
