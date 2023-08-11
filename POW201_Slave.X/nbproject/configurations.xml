@@ -5,13 +5,13 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="driver" displayName="driver" projectFiles="true">
-        <logicalFolder name="power controller"
-                       displayName="power controller"
+        <logicalFolder name="PowerController"
+                       displayName="PowerController"
                        projectFiles="true">
-          <itemPath>sources/driver/power controller/npnz16b.inc</itemPath>
-          <itemPath>sources/driver/power controller/npnz16b.h</itemPath>
-          <itemPath>sources/driver/power controller/VCOMP.h</itemPath>
-          <itemPath>sources/driver/power controller/BuckConverter.h</itemPath>
+          <itemPath>sources/driver/PowerController/npnz16b.inc</itemPath>
+          <itemPath>sources/driver/PowerController/npnz16b.h</itemPath>
+          <itemPath>sources/driver/PowerController/VCOMP.h</itemPath>
+          <itemPath>sources/driver/PowerController/BuckConverter.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -50,12 +50,12 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="driver" displayName="driver" projectFiles="true">
-        <logicalFolder name="power controller"
-                       displayName="power controller"
+        <logicalFolder name="PowerController"
+                       displayName="PowerController"
                        projectFiles="true">
-          <itemPath>sources/driver/power controller/VCOMP.c</itemPath>
-          <itemPath>sources/driver/power controller/VCOMP_asm.s</itemPath>
-          <itemPath>sources/driver/power controller/BuckConverter.c</itemPath>
+          <itemPath>sources/driver/PowerController/VCOMP.c</itemPath>
+          <itemPath>sources/driver/PowerController/VCOMP_asm.s</itemPath>
+          <itemPath>sources/driver/PowerController/BuckConverter.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="MCC Generated Files"
@@ -255,7 +255,7 @@
       <C30Global>
         <property key="combine-sourcefiles" value="false"/>
         <property key="common-include-directories"
-                  value="sources/driver/power controller"/>
+                  value="sources/driver/powercontroller"/>
         <property key="dual-boot-partition" value="0"/>
         <property key="fast-math" value="false"/>
         <property key="generic-16-bit" value="false"/>
