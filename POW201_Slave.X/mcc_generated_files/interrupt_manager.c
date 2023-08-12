@@ -52,15 +52,15 @@
 */
 void INTERRUPT_Initialize (void)
 {
-    //    ADCAN13: ADC AN13 Convert Done
-    //    Priority: 6
-        IPC26bits.ADCAN13IP = 6;
     //    ADCAN19: ADC AN19 Convert Done
     //    Priority: 1
         IPC27bits.ADCAN19IP = 1;
     //    ADCAN20: ADC AN20 Convert Done
     //    Priority: 1
         IPC27bits.ADCAN20IP = 1;
+    //    ADCAN1: ADC AN1 Convert Done
+    //    Priority: 1
+        IPC23bits.ADCAN1IP = 1;
     //    ADCAN2: ADC AN2 Convert Done
     //    Priority: 1
         IPC23bits.ADCAN2IP = 1;

@@ -40,7 +40,7 @@ volatile uint16_t VCOMP_ControlObject_Initialize(void)
     /* Controller Input and Output Ports Configuration */
 
      // Configure Controller Primary Input Port
-    VCOMP.Ports.Source.ptrAddress = &ADCBUF13;  // Pointer to primary feedback source (e.g. ADC buffer register or variable)
+    VCOMP.Ports.Source.ptrAddress = &ADCBUF1;  // Pointer to primary feedback source (e.g. ADC buffer register or variable)
     VCOMP.Ports.Source.Offset = 0;              // Primary feedback signal offset
     VCOMP.Ports.Source.NormScaler = 0;          // Primary feedback normalization factor bit-shift scaler
     VCOMP.Ports.Source.NormFactor = 0x7FFF;     // Primary feedback normalization factor fractional
@@ -98,7 +98,7 @@ volatile uint16_t VCOMP_ControlObject_Initialize(void)
  *
  * **************************************************************************************************/
 
-void __attribute__((__interrupt__, auto_psv)) _ADCAN13Interrupt(void)
+void __attribute__ ( ( __interrupt__ , auto_psv) ) _ADCAN1Interrupt ( void )
 {
     //LED2_SetHigh();
     
@@ -106,7 +106,7 @@ void __attribute__((__interrupt__, auto_psv)) _ADCAN13Interrupt(void)
     VCOMP_PTermUpdate(&VCOMP);        // Call P-Term control loop
     
     //LED2_SetLow();
-    IFS6bits.ADCAN13IF = 0;             // Clear the interrupt flag
+    IFS5bits.ADCAN1IF = 0;             // Clear the interrupt flag
 }
 
 

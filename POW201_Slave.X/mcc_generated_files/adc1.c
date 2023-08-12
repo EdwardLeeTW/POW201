@@ -53,10 +53,10 @@
 */
 
 static void (*ADC1_CommonDefaultInterruptHandler)(void);
-static void (*ADC1_VoutFBDefaultInterruptHandler)(uint16_t adcVal);
 static void (*ADC1_channel_S1AN2DefaultInterruptHandler)(uint16_t adcVal);
 static void (*ADC1_channel_S1AN19DefaultInterruptHandler)(uint16_t adcVal);
 static void (*ADC1_channel_S1AN20DefaultInterruptHandler)(uint16_t adcVal);
+static void (*ADC1_VoutFBDefaultInterruptHandler)(uint16_t adcVal);
 
 /**
   Section: Driver Interface
@@ -74,20 +74,20 @@ void ADC1_Initialize (void)
     ADCON2H = 0x00;
     // SWCTRG disabled; SHRSAMP disabled; SUSPEND disabled; SWLCTRG disabled; SUSPCIE disabled; CNVCHSEL AN0; REFSEL disabled; 
     ADCON3L = 0x00;
-    // SHREN enabled; C1EN disabled; C0EN disabled; CLKDIV 3; CLKSEL PLL VCO/4; 
-    ADCON3H = (0xC280 & 0xFF00); //Disabling C0EN, C1EN, C2EN, C3EN and SHREN bits
+    // SHREN enabled; C1EN enabled; C0EN disabled; CLKDIV 3; CLKSEL PLL VCO/4; 
+    ADCON3H = (0xC282 & 0xFF00); //Disabling C0EN, C1EN, C2EN, C3EN and SHREN bits
     // SAMC0EN disabled; SAMC1EN disabled; SYNCTRG1 disabled; SYNCTRG0 disabled; 
     ADCON4L = 0x00;
-    // C0CHS S1AN0; C1CHS S1AN1; 
-    ADCON4H = 0x00;
+    // C0CHS S1AN0; C1CHS S1ANA1; 
+    ADCON4H = 0x04;
     // SIGN0 disabled; SIGN4 disabled; SIGN3 disabled; SIGN2 disabled; SIGN1 disabled; SIGN7 disabled; SIGN6 disabled; DIFF0 disabled; SIGN5 disabled; DIFF1 disabled; 
     ADMOD0L = 0x00;
     // SIGN10 disabled; SIGN11 disabled; SIGN12 disabled; SIGN13 disabled; SIGN8 disabled; SIGN14 disabled; SIGN15 disabled; SIGN9 disabled; 
     ADMOD0H = 0x00;
     // SIGN20 disabled; SIGN16 disabled; SIGN17 disabled; SIGN18 disabled; SIGN19 disabled; 
     ADMOD1L = 0x00;
-    // IE15 disabled; IE1 disabled; IE0 disabled; IE3 disabled; IE2 enabled; IE5 disabled; IE4 disabled; IE10 disabled; IE7 disabled; IE6 disabled; IE9 disabled; IE13 enabled; IE8 disabled; IE14 disabled; IE11 disabled; IE12 disabled; 
-    ADIEL = 0x2004;
+    // IE15 disabled; IE1 enabled; IE0 disabled; IE3 disabled; IE2 enabled; IE5 disabled; IE4 disabled; IE10 disabled; IE7 disabled; IE6 disabled; IE9 disabled; IE13 disabled; IE8 disabled; IE14 disabled; IE11 disabled; IE12 disabled; 
+    ADIEL = 0x06;
     // IE17 disabled; IE18 disabled; IE16 disabled; IE19 enabled; IE20 enabled; 
     ADIEH = 0x18;
     // CMPEN10 disabled; CMPEN11 disabled; CMPEN6 disabled; CMPEN5 disabled; CMPEN4 disabled; CMPEN3 disabled; CMPEN2 disabled; CMPEN1 disabled; CMPEN0 disabled; CMPEN14 disabled; CMPEN9 disabled; CMPEN15 disabled; CMPEN8 disabled; CMPEN12 disabled; CMPEN7 disabled; CMPEN13 disabled; 
@@ -159,15 +159,11 @@ void ADC1_Initialize (void)
 	
     //Assign Default Callbacks
     ADC1_SetCommonInterruptHandler(&ADC1_CallBack);
-    ADC1_SetVoutFBInterruptHandler(&ADC1_VoutFB_CallBack);
     ADC1_Setchannel_S1AN2InterruptHandler(&ADC1_channel_S1AN2_CallBack);
     ADC1_Setchannel_S1AN19InterruptHandler(&ADC1_channel_S1AN19_CallBack);
     ADC1_Setchannel_S1AN20InterruptHandler(&ADC1_channel_S1AN20_CallBack);
+    ADC1_SetVoutFBInterruptHandler(&ADC1_VoutFB_CallBack);
     
-    // Clearing VoutFB interrupt flag.
-    IFS6bits.ADCAN13IF = 0;
-    // Enabling VoutFB interrupt.
-    IEC6bits.ADCAN13IE = 1;
     // Clearing channel_S1AN2 interrupt flag.
     IFS5bits.ADCAN2IF = 0;
     // Enabling channel_S1AN2 interrupt.
@@ -180,6 +176,10 @@ void ADC1_Initialize (void)
     IFS6bits.ADCAN20IF = 0;
     // Enabling channel_S1AN20 interrupt.
     IEC6bits.ADCAN20IE = 1;
+    // Clearing VoutFB interrupt flag.
+    IFS5bits.ADCAN1IF = 0;
+    // Enabling VoutFB interrupt.
+    IEC5bits.ADCAN1IE = 1;
 
     // Setting WARMTIME bit
     ADCON5Hbits.WARMTIME = 0xF;
@@ -187,9 +187,11 @@ void ADC1_Initialize (void)
     ADCON1Lbits.ADON = 0x1;
     // Enabling Power for the Shared Core
     ADC1_SharedCorePowerEnable();
+    // Enabling Power for Core1
+    ADC1_Core1PowerEnable();
 
-    //TRGSRC0 None; TRGSRC1 None; 
-    ADTRIG0L = 0x00;
+    //TRGSRC0 None; TRGSRC1 Slave PWM7 Trigger1; 
+    ADTRIG0L = 0xE00;
     //TRGSRC3 None; TRGSRC2 Common Software Trigger; 
     ADTRIG0H = 0x01;
     //TRGSRC4 None; TRGSRC5 None; 
@@ -200,8 +202,8 @@ void ADC1_Initialize (void)
     ADTRIG2L = 0x00;
     //TRGSRC11 None; TRGSRC10 None; 
     ADTRIG2H = 0x00;
-    //TRGSRC13 Slave PWM7 Trigger1; TRGSRC12 None; 
-    ADTRIG3L = 0xE00;
+    //TRGSRC13 None; TRGSRC12 None; 
+    ADTRIG3L = 0x00;
     //TRGSRC15 None; TRGSRC14 None; 
     ADTRIG3H = 0x00;
     //TRGSRC17 None; TRGSRC16 None; 
@@ -256,31 +258,6 @@ void __attribute__ ((weak)) ADC1_Tasks ( void )
         // clear the ADC1 interrupt flag
         IFS5bits.ADCIF = 0;
     }
-}
-
-void __attribute__ ((weak)) ADC1_VoutFB_CallBack( uint16_t adcVal )
-{ 
-
-}
-
-void ADC1_SetVoutFBInterruptHandler(void* handler)
-{
-    ADC1_VoutFBDefaultInterruptHandler = handler;
-}
-
-void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCAN13Interrupt ( void )
-{
-    uint16_t valVoutFB;
-    //Read the ADC value from the ADCBUF
-    valVoutFB = ADCBUF13;
-
-    if(ADC1_VoutFBDefaultInterruptHandler) 
-    { 
-        ADC1_VoutFBDefaultInterruptHandler(valVoutFB); 
-    }
-
-    //clear the VoutFB interrupt flag
-    IFS6bits.ADCAN13IF = 0;
 }
 
 void __attribute__ ((weak)) ADC1_channel_S1AN2_CallBack( uint16_t adcVal )
@@ -358,6 +335,31 @@ void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCAN20Interrupt ( vo
     IFS6bits.ADCAN20IF = 0;
 }
 
+
+void __attribute__ ((weak)) ADC1_VoutFB_CallBack( uint16_t adcVal )
+{ 
+
+}
+
+void ADC1_SetVoutFBInterruptHandler(void* handler)
+{
+    ADC1_VoutFBDefaultInterruptHandler = handler;
+}
+
+void __attribute__ ( ( __interrupt__ , auto_psv, weak ) ) _ADCAN1Interrupt ( void )
+{
+    uint16_t valVoutFB;
+    //Read the ADC value from the ADCBUF
+    valVoutFB = ADCBUF1;
+
+    if(ADC1_VoutFBDefaultInterruptHandler) 
+    { 
+        ADC1_VoutFBDefaultInterruptHandler(valVoutFB); 
+    }
+
+    //clear the VoutFB interrupt flag
+    IFS5bits.ADCAN1IF = 0;
+}
 
 
 

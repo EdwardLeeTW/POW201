@@ -56,13 +56,13 @@
 */
 /**
   @Summary
-    Sets the GPIO pin, RD10, high using LATD10.
+    Sets the GPIO pin, RC1, high using LATC1.
 
   @Description
-    Sets the GPIO pin, RD10, high using LATD10.
+    Sets the GPIO pin, RC1, high using LATC1.
 
   @Preconditions
-    The RD10 must be set to an output.
+    The RC1 must be set to an output.
 
   @Returns
     None.
@@ -72,21 +72,21 @@
 
   @Example
     <code>
-    // Set RD10 high (1)
+    // Set RC1 high (1)
     VoutFB_SetHigh();
     </code>
 
 */
-#define VoutFB_SetHigh()          (_LATD10 = 1)
+#define VoutFB_SetHigh()          (_LATC1 = 1)
 /**
   @Summary
-    Sets the GPIO pin, RD10, low using LATD10.
+    Sets the GPIO pin, RC1, low using LATC1.
 
   @Description
-    Sets the GPIO pin, RD10, low using LATD10.
+    Sets the GPIO pin, RC1, low using LATC1.
 
   @Preconditions
-    The RD10 must be set to an output.
+    The RC1 must be set to an output.
 
   @Returns
     None.
@@ -96,21 +96,21 @@
 
   @Example
     <code>
-    // Set RD10 low (0)
+    // Set RC1 low (0)
     VoutFB_SetLow();
     </code>
 
 */
-#define VoutFB_SetLow()           (_LATD10 = 0)
+#define VoutFB_SetLow()           (_LATC1 = 0)
 /**
   @Summary
-    Toggles the GPIO pin, RD10, using LATD10.
+    Toggles the GPIO pin, RC1, using LATC1.
 
   @Description
-    Toggles the GPIO pin, RD10, using LATD10.
+    Toggles the GPIO pin, RC1, using LATC1.
 
   @Preconditions
-    The RD10 must be set to an output.
+    The RC1 must be set to an output.
 
   @Returns
     None.
@@ -120,18 +120,18 @@
 
   @Example
     <code>
-    // Toggle RD10
+    // Toggle RC1
     VoutFB_Toggle();
     </code>
 
 */
-#define VoutFB_Toggle()           (_LATD10 ^= 1)
+#define VoutFB_Toggle()           (_LATC1 ^= 1)
 /**
   @Summary
-    Reads the value of the GPIO pin, RD10.
+    Reads the value of the GPIO pin, RC1.
 
   @Description
-    Reads the value of the GPIO pin, RD10.
+    Reads the value of the GPIO pin, RC1.
 
   @Preconditions
     None.
@@ -146,18 +146,18 @@
     <code>
     uint16_t portValue;
 
-    // Read RD10
+    // Read RC1
     postValue = VoutFB_GetValue();
     </code>
 
 */
-#define VoutFB_GetValue()         _RD10
+#define VoutFB_GetValue()         _RC1
 /**
   @Summary
-    Configures the GPIO pin, RD10, as an input.
+    Configures the GPIO pin, RC1, as an input.
 
   @Description
-    Configures the GPIO pin, RD10, as an input.
+    Configures the GPIO pin, RC1, as an input.
 
   @Preconditions
     None.
@@ -170,18 +170,18 @@
 
   @Example
     <code>
-    // Sets the RD10 as an input
+    // Sets the RC1 as an input
     VoutFB_SetDigitalInput();
     </code>
 
 */
-#define VoutFB_SetDigitalInput()  (_TRISD10 = 1)
+#define VoutFB_SetDigitalInput()  (_TRISC1 = 1)
 /**
   @Summary
-    Configures the GPIO pin, RD10, as an output.
+    Configures the GPIO pin, RC1, as an output.
 
   @Description
-    Configures the GPIO pin, RD10, as an output.
+    Configures the GPIO pin, RC1, as an output.
 
   @Preconditions
     None.
@@ -194,12 +194,12 @@
 
   @Example
     <code>
-    // Sets the RD10 as an output
+    // Sets the RC1 as an output
     VoutFB_SetDigitalOutput();
     </code>
 
 */
-#define VoutFB_SetDigitalOutput() (_TRISD10 = 0)
+#define VoutFB_SetDigitalOutput() (_TRISC1 = 0)
 /**
   @Summary
     Sets the GPIO pin, RE1, high using LATE1.

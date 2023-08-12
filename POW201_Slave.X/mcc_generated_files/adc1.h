@@ -90,10 +90,10 @@
  */
 typedef enum 
 {
-    VoutFB,//Channel Name:S1AN13   Assigned to:Shared Channel
     channel_S1AN2,//Channel Name:S1AN2   Assigned to:Shared Channel
     channel_S1AN19,//Channel Name:S1AN19   Assigned to:Shared Channel
     channel_S1AN20,//Channel Name:S1AN20   Assigned to:Shared Channel
+    VoutFB,//Channel Name:S1ANA1   Assigned to:Dedicated Core1
 } ADC1_CHANNEL;
 
 /**
@@ -384,9 +384,6 @@ inline static uint16_t ADC1_ConversionResultGet( ADC1_CHANNEL channel )
 
     switch(channel)
     {
-        case VoutFB:
-                result = ADCBUF13;
-                break;
         case channel_S1AN2:
                 result = ADCBUF2;
                 break;
@@ -395,6 +392,9 @@ inline static uint16_t ADC1_ConversionResultGet( ADC1_CHANNEL channel )
                 break;
         case channel_S1AN20:
                 result = ADCBUF20;
+                break;
+        case VoutFB:
+                result = ADCBUF1;
                 break;
         default:
                 break;
@@ -445,9 +445,6 @@ inline static bool ADC1_IsConversionComplete(ADC1_CHANNEL channel)
 
     switch(channel)
     {
-        case VoutFB:
-                status = ADSTATLbits.AN13RDY;
-                break;
         case channel_S1AN2:
                 status = ADSTATLbits.AN2RDY;
                 break;
@@ -456,6 +453,9 @@ inline static bool ADC1_IsConversionComplete(ADC1_CHANNEL channel)
                 break;
         case channel_S1AN20:
                 status = ADSTATHbits.AN20RDY;
+                break;
+        case VoutFB:
+                status = ADSTATLbits.AN1RDY;
                 break;
         default:
                 break;
@@ -667,9 +667,6 @@ inline static void ADC1_IndividualChannelInterruptEnable(ADC1_CHANNEL channel)
 {
     switch(channel)
     {
-        case VoutFB:
-                IEC6bits.ADCAN13IE = 1;
-                break;
         case channel_S1AN2:
                 IEC5bits.ADCAN2IE = 1;
                 break;
@@ -678,6 +675,9 @@ inline static void ADC1_IndividualChannelInterruptEnable(ADC1_CHANNEL channel)
                 break;
         case channel_S1AN20:
                 IEC6bits.ADCAN20IE = 1;
+                break;
+        case VoutFB:
+                IEC5bits.ADCAN1IE = 1;
                 break;
         default:
                 break;
@@ -710,9 +710,6 @@ inline static void ADC1_IndividualChannelInterruptDisable(ADC1_CHANNEL channel)
 {
     switch(channel)
     {
-        case VoutFB:
-                IEC6bits.ADCAN13IE = 0;
-                break;
         case channel_S1AN2:
                 IEC5bits.ADCAN2IE = 0;
                 break;
@@ -721,6 +718,9 @@ inline static void ADC1_IndividualChannelInterruptDisable(ADC1_CHANNEL channel)
                 break;
         case channel_S1AN20:
                 IEC6bits.ADCAN20IE = 0;
+                break;
+        case VoutFB:
+                IEC5bits.ADCAN1IE = 0;
                 break;
         default:
                 break;
@@ -752,9 +752,6 @@ inline static void ADC1_IndividualChannelInterruptFlagClear(ADC1_CHANNEL channel
 {
     switch(channel)
     {
-        case VoutFB:
-                IFS6bits.ADCAN13IF = 0;
-                break;
         case channel_S1AN2:
                 IFS5bits.ADCAN2IF = 0;
                 break;
@@ -764,56 +761,13 @@ inline static void ADC1_IndividualChannelInterruptFlagClear(ADC1_CHANNEL channel
         case channel_S1AN20:
                 IFS6bits.ADCAN20IF = 0;
                 break;
+        case VoutFB:
+                IFS5bits.ADCAN1IF = 0;
+                break;
         default:
                 break;
     }
 }
-
-/**
-  @Summary
-    ADC1 VoutFB callback routine.
-
-  @Description
-    This routine is a ADC1 VoutFB callback function.
-  
-  @Preconditions
-    None.
-
-  @Param
-    None.
-
-  @Returns
-    None
- 
-  @Example 
-    <code>
-        ADC1_SetVoutFBInterruptHandler(&ADC1_VoutFB_CallBack);
-    </code>
-*/
-void ADC1_VoutFB_CallBack(uint16_t adcVal);
-
-/**
-  @Summary
-    Assigns a function pointer with a ADC1 VoutFB callback address.
-
-  @Description
-    This routine assigns a function pointer with a ADC1 VoutFB callback address.
-  
-  @Preconditions
-    None.
-
-  @Param
-    Address of the callback routine.
-
-  @Returns
-    None
- 
-  @Example 
-    <code>
-        ADC1_SetVoutFBInterruptHandler(&ADC1_VoutFB_CallBack);
-    </code>
-*/
-void ADC1_SetVoutFBInterruptHandler(void* handler);
 
 /**
   @Summary
@@ -953,6 +907,52 @@ void ADC1_channel_S1AN20_CallBack(uint16_t adcVal);
 */
 void ADC1_Setchannel_S1AN20InterruptHandler(void* handler);
 
+
+/**
+  @Summary
+    ADC1 VoutFB callback routine.
+
+  @Description
+    This routine is a ADC1 VoutFB callback function.
+  
+  @Preconditions
+    None.
+
+  @Param
+    None.
+
+  @Returns
+    None
+ 
+  @Example 
+    <code>
+        ADC1_SetVoutFBInterruptHandler(&ADC1_VoutFB_CallBack);
+    </code>
+*/
+void ADC1_VoutFB_CallBack(uint16_t adcVal);
+
+/**
+  @Summary
+    Assigns a function pointer with a ADC1 VoutFB callback address.
+
+  @Description
+    This routine assigns a function pointer with a ADC1 VoutFB callback address.
+  
+  @Preconditions
+    None.
+
+  @Param
+    Address of the callback routine.
+
+  @Returns
+    None
+ 
+  @Example 
+    <code>
+        ADC1_SetVoutFBInterruptHandler(&ADC1_VoutFB_CallBack);
+    </code>
+*/
+void ADC1_SetVoutFBInterruptHandler(void* handler);
 
 
 
@@ -1472,61 +1472,6 @@ inline static void __attribute__((deprecated("\nThis will be removed in future M
 inline static void __attribute__((deprecated("\nThis will be removed in future MCC releases."))) ADC1_SharedCoreConversionClockPrescalerSet(uint8_t prescaler)
 {
     ADCON2Lbits.SHRADCS = prescaler;
-}
-/**
-  @Summary
-    Returns the ADC1 conversion value for the shared core channel AN13
-
-  @Description
-    This routine is used to get the analog to digital converted value for channel AN13. This
-    routine gets converted values from the shared core channel AN13.
- 
-  @Preconditions
-    The shared core must be enabled and calibrated before calling this routine 
-    using ADC1_SharedCorePowerEnable() and ADC1_SharedCoreCalibration() 
-    respectively. This routine returns the conversion value only after the 
-    conversion is complete. Completion status conversion can be checked using 
-    ADC1_IsSharedChannelAN13ConversionComplete() routine.
-   
-  @Returns
-    Returns the buffer containing the conversion value.
-
-  @Param
-    Buffer address
-  
-  @Example
-    Refer to ADC1_Initialize(); for an example
- */
-inline static uint16_t __attribute__((deprecated("\nThis will be removed in future MCC releases."))) ADC1_SharedChannelAN13ConversionResultGet(void) 
-{
-    return ADCBUF13;
-}
-/**
-  @Summary
-    Returns the conversion status of shared channel AN13 selected for conversion
-
-  @Description
-    This routine is used to return the conversion status of the shared channel AN13 
-    selected for conversion.
-  
-  @Preconditions
-    ADC1_Initialize() function should have been 
-    called before calling this function.
- 
-  @Returns
-    The value of the Channel AN13 Conversion register
-
-  @Param
-    None
-  
-  @Example
-    Refer to ADC1_Initialize(); for an example
- 
-*/
-
-inline static bool __attribute__((deprecated("\nThis will be removed in future MCC releases."))) ADC1_IsSharedChannelAN13ConversionComplete(void)
-{   
-    return ADSTATLbits.AN13RDY;
 }
 
 #ifdef __cplusplus  // Provide C++ Compatibility

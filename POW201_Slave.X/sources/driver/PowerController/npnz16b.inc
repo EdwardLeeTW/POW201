@@ -24,7 +24,7 @@
 ;  SDK Version: PowerSmart Digital Control Library Designer v1.9.15.709
 ;  CGS Version: Code Generator Script v3.0.11 (01/06/2022)
 ;  Author:      edwardlee
-;  Date/Time:   08/11/2023 16:21:54
+;  Date/Time:   08/12/2023 13:48:04
 ; **********************************************************************************
     
 ;------------------------------------------------------------------------------
