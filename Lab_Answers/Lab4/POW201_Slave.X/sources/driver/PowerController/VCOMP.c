@@ -16,7 +16,7 @@
  * CGS Date:            01/06/2022
  * *********************************************************************************
  * User:                edwardlee
- * Date/Time:           08/12/2023 16:47:38
+ * Date/Time:           08/14/2023 15:30:28
  * ********************************************************************************/
 
 #include "VCOMP.h"
@@ -50,11 +50,11 @@ volatile uint16_t VCOMP_ErrorHistory_size = (sizeof(VCOMP_histories.ErrorHistory
  * Pole&Zero Placement:
  * *********************************************************************************
  *
- *    fP0:    650 Hz
- *    fP1:    86000 Hz
- *    fP2:    100000 Hz
- *    fZ1:    3200 Hz
- *    fZ2:    4900 Hz
+ *    fP0:    1670 Hz
+ *    fP1:    2700 Hz
+ *    fP2:    250000 Hz
+ *    fZ1:    2300 Hz
+ *    fZ2:    2300 Hz
  *
  * *********************************************************************************
  * Filter Coefficients and Parameters:
@@ -62,17 +62,17 @@ volatile uint16_t VCOMP_ErrorHistory_size = (sizeof(VCOMP_histories.ErrorHistory
 
 volatile int32_t VCOMP_ACoefficients [3] =
 {
-    0x6C7B0000, // Coefficient A1 will be multiplied with controller output u(n-1)
-    0x4BD50002, // Coefficient A2 will be multiplied with controller output u(n-2)
-    0x48470007  // Coefficient A3 will be multiplied with controller output u(n-3)
+    0x5AB5FFFF, // Coefficient A1 will be multiplied with controller output u(n-1)
+    0x43770003, // Coefficient A2 will be multiplied with controller output u(n-2)
+    0x84500001  // Coefficient A3 will be multiplied with controller output u(n-3)
 };
 
 volatile int32_t VCOMP_BCoefficients [4] =
 {
-    0x7B0FFFFF, // Coefficient B0 will be multiplied with error input e(n-0)
-    0x9CBCFFFF, // Coefficient B1 will be multiplied with error input e(n-1)
-    0x860CFFFF, // Coefficient B2 will be multiplied with error input e(n-2)
-    0x645FFFFF  // Coefficient B3 will be multiplied with error input e(n-3)
+    0x4D53FFFF, // Coefficient B0 will be multiplied with error input e(n-0)
+    0xBB5FFFFF, // Coefficient B1 will be multiplied with error input e(n-1)
+    0xB2EDFFFF, // Coefficient B2 will be multiplied with error input e(n-2)
+    0x44E1FFFF  // Coefficient B3 will be multiplied with error input e(n-3)
 };
 
 // Coefficient normalization factors

@@ -102,8 +102,8 @@ void __attribute__ ( ( __interrupt__ , auto_psv) ) _ADCAN1Interrupt ( void )
 {
     //LED2_SetHigh();
     
-    //VCOMP_Update(&VCOMP);               // Call control loop
-    VCOMP_PTermUpdate(&VCOMP);        // Call P-Term control loop
+    VCOMP_Update(&VCOMP);               // Call control loop
+    //VCOMP_PTermUpdate(&VCOMP);        // Call P-Term control loop
     
     //LED2_SetLow();
     IFS5bits.ADCAN1IF = 0;             // Clear the interrupt flag

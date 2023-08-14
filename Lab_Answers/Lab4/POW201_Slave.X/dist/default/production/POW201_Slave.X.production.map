@@ -1,24 +1,24 @@
-Microchip Technology Inc, v2.10 (B)
+Microchip Technology Inc, v2.00 (B)
 
 Tool Name:
-  /Applications/microchip/xc16/v2.10/bin/bin/../bin/elf-ld
+  c:\program files\microchip\xc16\v2.00\bin\bin\..\bin/elf-ld.exe
 
 Command:
   -p33CH512MP508S1 \
-  --mdfp=/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16 \
+  --mdfp=C:/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16 \
   -o \
   dist/default/production/POW201_Slave.X.production.elf \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/.. \
-  -L/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16/bin/../lib \
-  -L/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16/bin/../support/dsPIC33C/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../lib \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/PIC24E/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/PIC24F/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/PIC24H/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/dsPIC30F/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33C/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33E/gld \
-  -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/dsPIC33F/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/.. \
+  -LC:/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16/bin/../lib \
+  -LC:/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16/bin/../support/dsPIC33C/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../lib \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24E/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24F/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/PIC24H/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC30F/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33C/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33E/gld \
+  -Lc:/program files/microchip/xc16/v2.00/bin/bin/../../support/dsPIC33F/gld \
   build/default/production/sources/driver/PowerController/VCOMP.o \
   build/default/production/sources/driver/PowerController/VCOMP_asm.o \
   build/default/production/sources/driver/PowerController/BuckConverter.o \
@@ -68,15 +68,15 @@ Command:
 Optional library libp33CH512MP508S1.a not found
 Archive member included because of file (symbol)
 
-/Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt0_extendedch.o)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
                               (__resetPRI)
-/Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(data_init_extendedch.o)
-                              /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt0_extendedch.o) (__data_init_extended)
-/Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
+                              c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o) (__data_init_extended)
+c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
                               (__crt_start_mode_normal)
 
 
-xc16-ld 2.10 (B)
+xc16-ld 2.00 (B)
 
 Default Code Model: Small
 Default Data Model: Large
@@ -87,18 +87,18 @@ Default Scalar Model: Small
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0x200               0x35a           0x507  (1287)
-.text                        0x55a               0xba8          0x117c  (4476)
-.dinit                      0x1102                0x76            0xb1  (177)
-.text                       0x1178               0x13c           0x1da  (474)
+.text                        0x55a               0xcce          0x1335  (4917)
+.dinit                      0x1228                0x76            0xb1  (177)
+.text                       0x129e               0x13c           0x1da  (474)
 
-                 Total "program" memory used (bytes):         0x190e  (6414) 8%
+                 Total "program" memory used (bytes):         0x1ac7  (6855) 9%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0x4000]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-_0x110709b4064d74d4b        0x1000                   0            0x1c  (28)
+_000000000ACC7B4064d9d45a    0x1000                   0            0x1c  (28)
 .ndata                      0x101c                   0             0xe  (14)
 .nbss                       0x102a                   0            0x22  (34)
 .ndata                      0x104c                   0             0x2  (2)
@@ -169,8 +169,8 @@ External Symbols in Program Memory (by address):
 
                   0x000200                  __resetPRI
                   0x00023c                  __psv_init
-                  0x000248                  __data_init_extended
                   0x000248                  __data_init
+                  0x000248                  __data_init_extended
                   0x000312                  __ADCAN1Interrupt
                   0x000342                  __T1Interrupt
                   0x000378                  __OscillatorFail
@@ -181,139 +181,139 @@ External Symbols in Program Memory (by address):
                   0x00041a                  __SoftTrapError
                   0x000554                  __DefaultInterrupt
                   0x00055a                  _VCOMP_Initialize
-                  0x00074c                  _VCOMP_ControlObject_Initialize
-                  0x0008d4                  _Buck_Softstart
-                  0x0008f6                  _ADC1_Initialize
-                  0x0009be                  _ADC1_Core0PowerEnable
-                  0x0009d4                  _ADC1_Core1PowerEnable
-                  0x0009ea                  _ADC1_SharedCorePowerEnable
-                  0x000a06                  _ADC1_SetCommonInterruptHandler
-                  0x000a36                  _ADC1_Setchannel_S1AN2InterruptHandler
-                  0x000a4a                  _ADC1_Setchannel_S1AN19InterruptHandler
-                  0x000a5e                  _ADC1_Setchannel_S1AN20InterruptHandler
-                  0x000a72                  _ADC1_SetVoutFBInterruptHandler
-                  0x000a7e                  _VCOMP_Update
-                  0x000b44                  _VCOMP_Reset
-                  0x000b60                  _VCOMP_Precharge
-                  0x000b84                  _VCOMP_PTermUpdate
-                  0x000bf2                  _PWM_Initialize
-                  0x000c6a                  _PWM_Generator7_Tasks
-                  0x000c84                  _PWM_EventA_Tasks
-                  0x000c9e                  _PWM_EventB_Tasks
-                  0x000cb8                  _PWM_EventC_Tasks
-                  0x000cd2                  _PWM_EventD_Tasks
-                  0x000cec                  _PWM_EventE_Tasks
-                  0x000d06                  _PWM_EventF_Tasks
-                  0x000d1a                  _RESET_GetCause
-                  0x000e26                  _RESET_CauseClearAll
-                  0x000e2e                  _MASTER_Initialize
-                  0x000e36                  _MASTER_InterruptRequestGenerate
-                  0x000e3e                  _MASTER_IsInterruptRequestAcknowledged
-                  0x000e56                  _MASTER_InterruptRequestComplete
-                  0x000e5e                  _MASTER_IsInterruptRequested
-                  0x000e76                  _MASTER_InterruptRequestAcknowledge
-                  0x000e7e                  _MASTER_InterruptRequestAcknowledgeComplete
-                  0x000e86                  _MASTER_SystemStatusGet
-                  0x000ece                  _MASTER_Read
-                  0x000f08                  _MASTER_Write
-                  0x000f40                  _TMR1_Initialize
-                  0x000f64                  _TMR1_Period16BitSet
-                  0x000f76                  _TMR1_Period16BitGet
-                  0x000f7e                  _TMR1_Counter16BitSet
-                  0x000f90                  _TMR1_Counter16BitGet
-                  0x000f9e                  _TMR1_SetInterruptHandler
-                  0x000fae                  _TMR1_Start
-                  0x000fbe                  _TMR1_Stop
-                  0x000fc8                  _TMR1_GetElapsedThenClear
-                  0x000fe0                  _TMR1_SoftwareCounterGet
-                  0x000fec                  _TMR1_SoftwareCounterClear
-                  0x000ff8                  _OS_Scheduler_Init
-                  0x001002                  _TMR1_CallBack
-                  0x001022                  _OS_Scheduler_RunOnce
-                  0x00107c                  _OS_Scheduler_RunForever
-                  0x001086                  _CLOCK_Initialize
-                  0x0010ea                  _CLOCK_AuxPllLockStatusGet
-                  0x001178                  _PIN_MANAGER_Initialize
-                  0x0011ce                  _Tasks_Realtime_100us
-                  0x0011d4                  _Tasks_Realtime_1ms
-                  0x0011da                  _Tasks_100us
-                  0x0011e0                  _Tasks_1ms
-                  0x0011e8                  _Tasks_10ms
-                  0x0011ee                  _Tasks_100ms
-                  0x0011f4                  _Tasks_1s
-                  0x001212                  _Tasks_Background
-                  0x001218                  _INTERRUPT_Initialize
-                  0x00126e                  _SYSTEM_Initialize
-                  0x0012a0                  _main
-                  0x0012ac                  _OS_Init
+                  0x00083c                  _VCOMP_ControlObject_Initialize
+                  0x0009c2                  _Buck_Softstart
+                  0x0009e4                  _ADC1_Initialize
+                  0x000aac                  _ADC1_Core0PowerEnable
+                  0x000ac2                  _ADC1_Core1PowerEnable
+                  0x000ad8                  _ADC1_SharedCorePowerEnable
+                  0x000af4                  _ADC1_SetCommonInterruptHandler
+                  0x000b24                  _ADC1_Setchannel_S1AN2InterruptHandler
+                  0x000b38                  _ADC1_Setchannel_S1AN19InterruptHandler
+                  0x000b4c                  _ADC1_Setchannel_S1AN20InterruptHandler
+                  0x000b60                  _ADC1_SetVoutFBInterruptHandler
+                  0x000b6c                  _VCOMP_Update
+                  0x000c32                  _VCOMP_Reset
+                  0x000c4e                  _VCOMP_Precharge
+                  0x000c72                  _VCOMP_PTermUpdate
+                  0x000ce0                  _MASTER_Initialize
+                  0x000ce8                  _MASTER_InterruptRequestGenerate
+                  0x000cf0                  _MASTER_IsInterruptRequestAcknowledged
+                  0x000d08                  _MASTER_InterruptRequestComplete
+                  0x000d10                  _MASTER_IsInterruptRequested
+                  0x000d28                  _MASTER_InterruptRequestAcknowledge
+                  0x000d30                  _MASTER_InterruptRequestAcknowledgeComplete
+                  0x000d38                  _MASTER_SystemStatusGet
+                  0x000d80                  _MASTER_Read
+                  0x000dca                  _MASTER_Write
+                  0x000e12                  _RESET_GetCause
+                  0x000f36                  _RESET_CauseClearAll
+                  0x000f3e                  _PWM_Initialize
+                  0x000fb6                  _PWM_Generator7_Tasks
+                  0x000fd0                  _PWM_EventA_Tasks
+                  0x000fea                  _PWM_EventB_Tasks
+                  0x001004                  _PWM_EventC_Tasks
+                  0x00101e                  _PWM_EventD_Tasks
+                  0x001038                  _PWM_EventE_Tasks
+                  0x001052                  _PWM_EventF_Tasks
+                  0x001066                  _TMR1_Initialize
+                  0x00108a                  _TMR1_Period16BitSet
+                  0x00109c                  _TMR1_Period16BitGet
+                  0x0010a4                  _TMR1_Counter16BitSet
+                  0x0010b6                  _TMR1_Counter16BitGet
+                  0x0010c4                  _TMR1_SetInterruptHandler
+                  0x0010d4                  _TMR1_Start
+                  0x0010e4                  _TMR1_Stop
+                  0x0010ee                  _TMR1_GetElapsedThenClear
+                  0x001106                  _TMR1_SoftwareCounterGet
+                  0x001112                  _TMR1_SoftwareCounterClear
+                  0x00111e                  _OS_Scheduler_Init
+                  0x001128                  _TMR1_CallBack
+                  0x001148                  _OS_Scheduler_RunOnce
+                  0x0011a2                  _OS_Scheduler_RunForever
+                  0x0011ac                  _CLOCK_Initialize
+                  0x001210                  _CLOCK_AuxPllLockStatusGet
+                  0x00129e                  _PIN_MANAGER_Initialize
+                  0x0012f4                  _Tasks_Realtime_100us
+                  0x0012fa                  _Tasks_Realtime_1ms
+                  0x001300                  _Tasks_100us
+                  0x001306                  _Tasks_1ms
+                  0x00130e                  _Tasks_10ms
+                  0x001314                  _Tasks_100ms
+                  0x00131a                  _Tasks_1s
+                  0x001338                  _Tasks_Background
+                  0x00133e                  _INTERRUPT_Initialize
+                  0x001394                  _SYSTEM_Initialize
+                  0x0013c6                  _main
+                  0x0013d2                  _OS_Init
 
 External Symbols in Program Memory (by name):
 
-                  0x0009be                  _ADC1_Core0PowerEnable
-                  0x0009d4                  _ADC1_Core1PowerEnable
-                  0x0008f6                  _ADC1_Initialize
-                  0x000a06                  _ADC1_SetCommonInterruptHandler
-                  0x000a72                  _ADC1_SetVoutFBInterruptHandler
-                  0x000a4a                  _ADC1_Setchannel_S1AN19InterruptHandler
-                  0x000a5e                  _ADC1_Setchannel_S1AN20InterruptHandler
-                  0x000a36                  _ADC1_Setchannel_S1AN2InterruptHandler
-                  0x0009ea                  _ADC1_SharedCorePowerEnable
-                  0x0008d4                  _Buck_Softstart
-                  0x0010ea                  _CLOCK_AuxPllLockStatusGet
-                  0x001086                  _CLOCK_Initialize
-                  0x001218                  _INTERRUPT_Initialize
-                  0x000e2e                  _MASTER_Initialize
-                  0x000e76                  _MASTER_InterruptRequestAcknowledge
-                  0x000e7e                  _MASTER_InterruptRequestAcknowledgeComplete
-                  0x000e56                  _MASTER_InterruptRequestComplete
-                  0x000e36                  _MASTER_InterruptRequestGenerate
-                  0x000e3e                  _MASTER_IsInterruptRequestAcknowledged
-                  0x000e5e                  _MASTER_IsInterruptRequested
-                  0x000ece                  _MASTER_Read
-                  0x000e86                  _MASTER_SystemStatusGet
-                  0x000f08                  _MASTER_Write
-                  0x0012ac                  _OS_Init
-                  0x000ff8                  _OS_Scheduler_Init
-                  0x00107c                  _OS_Scheduler_RunForever
-                  0x001022                  _OS_Scheduler_RunOnce
-                  0x001178                  _PIN_MANAGER_Initialize
-                  0x000c84                  _PWM_EventA_Tasks
-                  0x000c9e                  _PWM_EventB_Tasks
-                  0x000cb8                  _PWM_EventC_Tasks
-                  0x000cd2                  _PWM_EventD_Tasks
-                  0x000cec                  _PWM_EventE_Tasks
-                  0x000d06                  _PWM_EventF_Tasks
-                  0x000c6a                  _PWM_Generator7_Tasks
-                  0x000bf2                  _PWM_Initialize
-                  0x000e26                  _RESET_CauseClearAll
-                  0x000d1a                  _RESET_GetCause
-                  0x00126e                  _SYSTEM_Initialize
-                  0x001002                  _TMR1_CallBack
-                  0x000f90                  _TMR1_Counter16BitGet
-                  0x000f7e                  _TMR1_Counter16BitSet
-                  0x000fc8                  _TMR1_GetElapsedThenClear
-                  0x000f40                  _TMR1_Initialize
-                  0x000f76                  _TMR1_Period16BitGet
-                  0x000f64                  _TMR1_Period16BitSet
-                  0x000f9e                  _TMR1_SetInterruptHandler
-                  0x000fec                  _TMR1_SoftwareCounterClear
-                  0x000fe0                  _TMR1_SoftwareCounterGet
-                  0x000fae                  _TMR1_Start
-                  0x000fbe                  _TMR1_Stop
-                  0x0011ee                  _Tasks_100ms
-                  0x0011da                  _Tasks_100us
-                  0x0011e8                  _Tasks_10ms
-                  0x0011e0                  _Tasks_1ms
-                  0x0011f4                  _Tasks_1s
-                  0x001212                  _Tasks_Background
-                  0x0011ce                  _Tasks_Realtime_100us
-                  0x0011d4                  _Tasks_Realtime_1ms
-                  0x00074c                  _VCOMP_ControlObject_Initialize
+                  0x000aac                  _ADC1_Core0PowerEnable
+                  0x000ac2                  _ADC1_Core1PowerEnable
+                  0x0009e4                  _ADC1_Initialize
+                  0x000af4                  _ADC1_SetCommonInterruptHandler
+                  0x000b60                  _ADC1_SetVoutFBInterruptHandler
+                  0x000b38                  _ADC1_Setchannel_S1AN19InterruptHandler
+                  0x000b4c                  _ADC1_Setchannel_S1AN20InterruptHandler
+                  0x000b24                  _ADC1_Setchannel_S1AN2InterruptHandler
+                  0x000ad8                  _ADC1_SharedCorePowerEnable
+                  0x0009c2                  _Buck_Softstart
+                  0x001210                  _CLOCK_AuxPllLockStatusGet
+                  0x0011ac                  _CLOCK_Initialize
+                  0x00133e                  _INTERRUPT_Initialize
+                  0x000ce0                  _MASTER_Initialize
+                  0x000d28                  _MASTER_InterruptRequestAcknowledge
+                  0x000d30                  _MASTER_InterruptRequestAcknowledgeComplete
+                  0x000d08                  _MASTER_InterruptRequestComplete
+                  0x000ce8                  _MASTER_InterruptRequestGenerate
+                  0x000cf0                  _MASTER_IsInterruptRequestAcknowledged
+                  0x000d10                  _MASTER_IsInterruptRequested
+                  0x000d80                  _MASTER_Read
+                  0x000d38                  _MASTER_SystemStatusGet
+                  0x000dca                  _MASTER_Write
+                  0x0013d2                  _OS_Init
+                  0x00111e                  _OS_Scheduler_Init
+                  0x0011a2                  _OS_Scheduler_RunForever
+                  0x001148                  _OS_Scheduler_RunOnce
+                  0x00129e                  _PIN_MANAGER_Initialize
+                  0x000fd0                  _PWM_EventA_Tasks
+                  0x000fea                  _PWM_EventB_Tasks
+                  0x001004                  _PWM_EventC_Tasks
+                  0x00101e                  _PWM_EventD_Tasks
+                  0x001038                  _PWM_EventE_Tasks
+                  0x001052                  _PWM_EventF_Tasks
+                  0x000fb6                  _PWM_Generator7_Tasks
+                  0x000f3e                  _PWM_Initialize
+                  0x000f36                  _RESET_CauseClearAll
+                  0x000e12                  _RESET_GetCause
+                  0x001394                  _SYSTEM_Initialize
+                  0x001128                  _TMR1_CallBack
+                  0x0010b6                  _TMR1_Counter16BitGet
+                  0x0010a4                  _TMR1_Counter16BitSet
+                  0x0010ee                  _TMR1_GetElapsedThenClear
+                  0x001066                  _TMR1_Initialize
+                  0x00109c                  _TMR1_Period16BitGet
+                  0x00108a                  _TMR1_Period16BitSet
+                  0x0010c4                  _TMR1_SetInterruptHandler
+                  0x001112                  _TMR1_SoftwareCounterClear
+                  0x001106                  _TMR1_SoftwareCounterGet
+                  0x0010d4                  _TMR1_Start
+                  0x0010e4                  _TMR1_Stop
+                  0x001314                  _Tasks_100ms
+                  0x001300                  _Tasks_100us
+                  0x00130e                  _Tasks_10ms
+                  0x001306                  _Tasks_1ms
+                  0x00131a                  _Tasks_1s
+                  0x001338                  _Tasks_Background
+                  0x0012f4                  _Tasks_Realtime_100us
+                  0x0012fa                  _Tasks_Realtime_1ms
+                  0x00083c                  _VCOMP_ControlObject_Initialize
                   0x00055a                  _VCOMP_Initialize
-                  0x000b84                  _VCOMP_PTermUpdate
-                  0x000b60                  _VCOMP_Precharge
-                  0x000b44                  _VCOMP_Reset
-                  0x000a7e                  _VCOMP_Update
+                  0x000c72                  _VCOMP_PTermUpdate
+                  0x000c4e                  _VCOMP_Precharge
+                  0x000c32                  _VCOMP_Reset
+                  0x000b6c                  _VCOMP_Update
                   0x000312                  __ADCAN1Interrupt
                   0x0003ba                  __AddressError
                   0x000554                  __DefaultInterrupt
@@ -327,7 +327,7 @@ External Symbols in Program Memory (by name):
                   0x000248                  __data_init_extended
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0012a0                  _main
+                  0x0013c6                  _main
 
 Memory Configuration
 
@@ -336,7 +336,7 @@ data             0x001000           0x004000           a !xr
 reset            0x000000           0x000004  
 ivt              0x000004           0x0001fc  
 program          0x000200           0x00be00           xr
-*default*        0x000000           0xffffffffffffffff  
+*default*        0x000000           0xffffffff  
 
 Linker script and memory map
 
@@ -363,7 +363,7 @@ LOAD build/default/production/main.o
 LOAD build/default/production/main_tasks.o
                     0x0001                  __MPLAB_BUILD = 0x1
 LOAD p33CH512MP508S1
-LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libfx-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libfx-elf.a
                     0x0001                  __NO_HANDLES = 0x1
                     0x0200                  __CODE_BASE = 0x200
                     0xbe00                  __CODE_LENGTH = 0xbe00
@@ -381,13 +381,13 @@ LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libfx-elf.a
 
 .text             0x000200        0x35a
  *(.init)
- .init            0x000200         0x48 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt0_extendedch.o)
-                  0x000200                  __reset
+ .init            0x000200         0x48 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
                   0x000200                  __resetPRI
+                  0x000200                  __reset
                   0x00023c                  __psv_init
- .init            0x000248         0xb2 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(data_init_extendedch.o)
-                  0x000248                  __data_init_extended
+ .init            0x000248         0xb2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
                   0x000248                  __data_init
+                  0x000248                  __data_init_extended
  *(.user_init)
  *(.handle)
  *(.isr*)
@@ -414,9 +414,9 @@ LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libfx-elf.a
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000558          0x2 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
-                  0x000558                  __crt_start_mode_normal
+                  0x000558          0x2 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
                   0x000558                  __crt_start_mode
+                  0x000558                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -424,28 +424,28 @@ usercode
 .comment
  *(.comment)
 
-.debug_info       0x000000       0xae7e
+.debug_info       0x000000       0xabbd
  *(.debug_info)
- .debug_info      0x000000       0x10ff build/default/production/sources/driver/PowerController/VCOMP.o
- .debug_info      0x0010ff         0xb7 build/default/production/sources/driver/PowerController/VCOMP_asm.o
- .debug_info      0x0011b6        0xdfb build/default/production/sources/driver/PowerController/BuckConverter.o
- .debug_info      0x001fb1        0x8b3 build/default/production/mcc_generated_files/tmr1.o
- .debug_info      0x002864        0x806 build/default/production/mcc_generated_files/master.o
- .debug_info      0x00306a        0x36f build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_info      0x0033d9        0x669 build/default/production/mcc_generated_files/clock.o
- .debug_info      0x003a42        0x4ab build/default/production/mcc_generated_files/reset.o
- .debug_info      0x003eed        0x550 build/default/production/mcc_generated_files/pin_manager.o
- .debug_info      0x00443d        0x60a build/default/production/mcc_generated_files/traps.o
- .debug_info      0x004a47       0x1f04 build/default/production/mcc_generated_files/system.o
- .debug_info      0x00694b       0x23c7 build/default/production/mcc_generated_files/adc1.o
- .debug_info      0x008d12       0x1132 build/default/production/mcc_generated_files/pwm.o
- .debug_info      0x009e44        0x4a0 build/default/production/sources/os/os_scheduler_100us.o
- .debug_info      0x00a2e4        0x149 build/default/production/sources/os/os_scheduler_1ms.o
- .debug_info      0x00a42d        0x144 build/default/production/sources/os/os_sys_time.o
- .debug_info      0x00a571        0x26b build/default/production/sources/os/os.o
- .debug_info      0x00a7dc        0x141 build/default/production/sources/os/os_timer.o
- .debug_info      0x00a91d        0x17f build/default/production/main.o
- .debug_info      0x00aa9c        0x3e2 build/default/production/main_tasks.o
+ .debug_info      0x000000       0x10db build/default/production/sources/driver/PowerController/VCOMP.o
+ .debug_info      0x0010db         0xa2 build/default/production/sources/driver/PowerController/VCOMP_asm.o
+ .debug_info      0x00117d        0xdd7 build/default/production/sources/driver/PowerController/BuckConverter.o
+ .debug_info      0x001f54        0x88f build/default/production/mcc_generated_files/tmr1.o
+ .debug_info      0x0027e3        0x7e2 build/default/production/mcc_generated_files/master.o
+ .debug_info      0x002fc5        0x34b build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x003310        0x645 build/default/production/mcc_generated_files/clock.o
+ .debug_info      0x003955        0x487 build/default/production/mcc_generated_files/reset.o
+ .debug_info      0x003ddc        0x52c build/default/production/mcc_generated_files/pin_manager.o
+ .debug_info      0x004308        0x5e6 build/default/production/mcc_generated_files/traps.o
+ .debug_info      0x0048ee       0x1ee0 build/default/production/mcc_generated_files/system.o
+ .debug_info      0x0067ce       0x23a3 build/default/production/mcc_generated_files/adc1.o
+ .debug_info      0x008b71       0x110e build/default/production/mcc_generated_files/pwm.o
+ .debug_info      0x009c7f        0x47c build/default/production/sources/os/os_scheduler_100us.o
+ .debug_info      0x00a0fb        0x125 build/default/production/sources/os/os_scheduler_1ms.o
+ .debug_info      0x00a220        0x120 build/default/production/sources/os/os_sys_time.o
+ .debug_info      0x00a340        0x247 build/default/production/sources/os/os.o
+ .debug_info      0x00a587        0x11d build/default/production/sources/os/os_timer.o
+ .debug_info      0x00a6a4        0x15b build/default/production/main.o
+ .debug_info      0x00a7ff        0x3be build/default/production/main_tasks.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xf26
@@ -472,29 +472,29 @@ usercode
  .debug_abbrev    0x000e30         0x5b build/default/production/main.o
  .debug_abbrev    0x000e8b         0x9b build/default/production/main_tasks.o
 
-.debug_line       0x000000       0x16c4
+.debug_line       0x000000       0x1658
  *(.debug_line)
- .debug_line      0x000000        0x12f build/default/production/sources/driver/PowerController/VCOMP.o
- .debug_line      0x00012f        0x115 build/default/production/sources/driver/PowerController/VCOMP_asm.o
- .debug_line      0x000244        0x1dd build/default/production/sources/driver/PowerController/BuckConverter.o
- .debug_line      0x000421        0x162 build/default/production/mcc_generated_files/tmr1.o
- .debug_line      0x000583        0x168 build/default/production/mcc_generated_files/master.o
- .debug_line      0x0006eb        0x129 build/default/production/mcc_generated_files/interrupt_manager.o
- .debug_line      0x000814        0x130 build/default/production/mcc_generated_files/clock.o
- .debug_line      0x000944        0x164 build/default/production/mcc_generated_files/reset.o
- .debug_line      0x000aa8         0x1a build/default/production/mcc_generated_files/mcc.o
- .debug_line      0x000ac2        0x13c build/default/production/mcc_generated_files/pin_manager.o
- .debug_line      0x000bfe        0x15d build/default/production/mcc_generated_files/traps.o
- .debug_line      0x000d5b        0x166 build/default/production/mcc_generated_files/system.o
- .debug_line      0x000ec1        0x1ca build/default/production/mcc_generated_files/adc1.o
- .debug_line      0x00108b        0x177 build/default/production/mcc_generated_files/pwm.o
- .debug_line      0x001202        0x143 build/default/production/sources/os/os_scheduler_100us.o
- .debug_line      0x001345         0x1a build/default/production/sources/os/os_scheduler_1ms.o
- .debug_line      0x00135f         0x1a build/default/production/sources/os/os_sys_time.o
- .debug_line      0x001379        0x10d build/default/production/sources/os/os.o
- .debug_line      0x001486         0x1a build/default/production/sources/os/os_timer.o
- .debug_line      0x0014a0        0x107 build/default/production/main.o
- .debug_line      0x0015a7        0x11d build/default/production/main_tasks.o
+ .debug_line      0x000000        0x145 build/default/production/sources/driver/PowerController/VCOMP.o
+ .debug_line      0x000145        0x115 build/default/production/sources/driver/PowerController/VCOMP_asm.o
+ .debug_line      0x00025a        0x1d7 build/default/production/sources/driver/PowerController/BuckConverter.o
+ .debug_line      0x000431        0x159 build/default/production/mcc_generated_files/tmr1.o
+ .debug_line      0x00058a        0x161 build/default/production/mcc_generated_files/master.o
+ .debug_line      0x0006eb        0x120 build/default/production/mcc_generated_files/interrupt_manager.o
+ .debug_line      0x00080b        0x127 build/default/production/mcc_generated_files/clock.o
+ .debug_line      0x000932        0x15b build/default/production/mcc_generated_files/reset.o
+ .debug_line      0x000a8d         0x1a build/default/production/mcc_generated_files/mcc.o
+ .debug_line      0x000aa7        0x133 build/default/production/mcc_generated_files/pin_manager.o
+ .debug_line      0x000bda        0x154 build/default/production/mcc_generated_files/traps.o
+ .debug_line      0x000d2e        0x15d build/default/production/mcc_generated_files/system.o
+ .debug_line      0x000e8b        0x1c1 build/default/production/mcc_generated_files/adc1.o
+ .debug_line      0x00104c        0x16e build/default/production/mcc_generated_files/pwm.o
+ .debug_line      0x0011ba        0x13a build/default/production/sources/os/os_scheduler_100us.o
+ .debug_line      0x0012f4         0x1a build/default/production/sources/os/os_scheduler_1ms.o
+ .debug_line      0x00130e         0x1a build/default/production/sources/os/os_sys_time.o
+ .debug_line      0x001328        0x104 build/default/production/sources/os/os.o
+ .debug_line      0x00142c         0x1a build/default/production/sources/os/os_timer.o
+ .debug_line      0x001446         0xfe build/default/production/main.o
+ .debug_line      0x001544        0x114 build/default/production/main_tasks.o
 
 .debug_frame      0x000000        0xd40
  *(.debug_frame)
@@ -577,42 +577,42 @@ usercode
 .debug_ranges
  *(.debug_ranges)
 
-.debug_aranges    0x000000        0x1d0
+.debug_aranges    0x000000        0x1c8
  *(.debug_aranges)
  .debug_aranges
                   0x000000         0x18 build/default/production/sources/driver/PowerController/VCOMP.o
  .debug_aranges
-                  0x000018         0x20 build/default/production/sources/driver/PowerController/VCOMP_asm.o
+                  0x000018         0x18 build/default/production/sources/driver/PowerController/VCOMP_asm.o
  .debug_aranges
-                  0x000038         0x18 build/default/production/sources/driver/PowerController/BuckConverter.o
+                  0x000030         0x18 build/default/production/sources/driver/PowerController/BuckConverter.o
  .debug_aranges
-                  0x000050         0x18 build/default/production/mcc_generated_files/tmr1.o
+                  0x000048         0x18 build/default/production/mcc_generated_files/tmr1.o
  .debug_aranges
-                  0x000068         0x18 build/default/production/mcc_generated_files/master.o
+                  0x000060         0x18 build/default/production/mcc_generated_files/master.o
  .debug_aranges
-                  0x000080         0x18 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000078         0x18 build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_aranges
-                  0x000098         0x18 build/default/production/mcc_generated_files/clock.o
+                  0x000090         0x18 build/default/production/mcc_generated_files/clock.o
  .debug_aranges
-                  0x0000b0         0x18 build/default/production/mcc_generated_files/reset.o
+                  0x0000a8         0x18 build/default/production/mcc_generated_files/reset.o
  .debug_aranges
-                  0x0000c8         0x18 build/default/production/mcc_generated_files/pin_manager.o
+                  0x0000c0         0x18 build/default/production/mcc_generated_files/pin_manager.o
  .debug_aranges
-                  0x0000e0         0x48 build/default/production/mcc_generated_files/traps.o
+                  0x0000d8         0x48 build/default/production/mcc_generated_files/traps.o
  .debug_aranges
-                  0x000128         0x18 build/default/production/mcc_generated_files/system.o
+                  0x000120         0x18 build/default/production/mcc_generated_files/system.o
  .debug_aranges
-                  0x000140         0x18 build/default/production/mcc_generated_files/adc1.o
+                  0x000138         0x18 build/default/production/mcc_generated_files/adc1.o
  .debug_aranges
-                  0x000158         0x18 build/default/production/mcc_generated_files/pwm.o
+                  0x000150         0x18 build/default/production/mcc_generated_files/pwm.o
  .debug_aranges
-                  0x000170         0x18 build/default/production/sources/os/os_scheduler_100us.o
+                  0x000168         0x18 build/default/production/sources/os/os_scheduler_100us.o
  .debug_aranges
-                  0x000188         0x18 build/default/production/sources/os/os.o
+                  0x000180         0x18 build/default/production/sources/os/os.o
  .debug_aranges
-                  0x0001a0         0x18 build/default/production/main.o
+                  0x000198         0x18 build/default/production/main.o
  .debug_aranges
-                  0x0001b8         0x18 build/default/production/main_tasks.o
+                  0x0001b0         0x18 build/default/production/main_tasks.o
                     0x0000                  WREG0 = 0x0
                     0x0000                  _WREG0 = 0x0
                     0x0002                  WREG1 = 0x2
@@ -2910,9 +2910,9 @@ usercode
                     0x023a                  UART1 = 0x23a
                     0x023a                  _UART1 = 0x23a
 START GROUP
-LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a
-LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libm-elf.a
-LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libm-elf.a
+LOAD c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-elf.a
 END GROUP
 OUTPUT(dist/default/production/POW201_Slave.X.production.elf elf32-pic30)
 LOAD jump_table
@@ -2920,96 +2920,96 @@ LOAD default_isr
 LOAD data_init
 
 .debug_pubtypes
-                  0x0001d0        0xd93
+                  0x0001c8        0xd93
  .debug_pubtypes
-                  0x0001d0        0x193 build/default/production/sources/driver/PowerController/VCOMP.o
+                  0x0001c8        0x193 build/default/production/sources/driver/PowerController/VCOMP.o
  .debug_pubtypes
-                  0x000363        0x14f build/default/production/sources/driver/PowerController/BuckConverter.o
+                  0x00035b        0x14f build/default/production/sources/driver/PowerController/BuckConverter.o
  .debug_pubtypes
-                  0x0004b2         0xa4 build/default/production/mcc_generated_files/tmr1.o
+                  0x0004aa         0xa4 build/default/production/mcc_generated_files/tmr1.o
  .debug_pubtypes
-                  0x000556         0xa3 build/default/production/mcc_generated_files/master.o
+                  0x00054e         0xa3 build/default/production/mcc_generated_files/master.o
  .debug_pubtypes
-                  0x0005f9         0x7a build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x0005f1         0x7a build/default/production/mcc_generated_files/interrupt_manager.o
  .debug_pubtypes
-                  0x000673         0x71 build/default/production/mcc_generated_files/clock.o
+                  0x00066b         0x71 build/default/production/mcc_generated_files/clock.o
  .debug_pubtypes
-                  0x0006e4         0x42 build/default/production/mcc_generated_files/reset.o
+                  0x0006dc         0x42 build/default/production/mcc_generated_files/reset.o
  .debug_pubtypes
-                  0x000726         0x1f build/default/production/mcc_generated_files/pin_manager.o
+                  0x00071e         0x1f build/default/production/mcc_generated_files/pin_manager.o
  .debug_pubtypes
-                  0x000745         0x94 build/default/production/mcc_generated_files/traps.o
+                  0x00073d         0x94 build/default/production/mcc_generated_files/traps.o
  .debug_pubtypes
-                  0x0007d9        0x2f9 build/default/production/mcc_generated_files/system.o
+                  0x0007d1        0x2f9 build/default/production/mcc_generated_files/system.o
  .debug_pubtypes
-                  0x000ad2        0x25a build/default/production/mcc_generated_files/adc1.o
+                  0x000aca        0x25a build/default/production/mcc_generated_files/adc1.o
  .debug_pubtypes
-                  0x000d2c        0x110 build/default/production/mcc_generated_files/pwm.o
+                  0x000d24        0x110 build/default/production/mcc_generated_files/pwm.o
  .debug_pubtypes
-                  0x000e3c         0x48 build/default/production/sources/os/os_scheduler_100us.o
+                  0x000e34         0x48 build/default/production/sources/os/os_scheduler_100us.o
  .debug_pubtypes
-                  0x000e84         0x12 build/default/production/sources/os/os_scheduler_1ms.o
+                  0x000e7c         0x12 build/default/production/sources/os/os_scheduler_1ms.o
  .debug_pubtypes
-                  0x000e96         0x12 build/default/production/sources/os/os_sys_time.o
+                  0x000e8e         0x12 build/default/production/sources/os/os_sys_time.o
  .debug_pubtypes
-                  0x000ea8         0x4e build/default/production/sources/os/os.o
+                  0x000ea0         0x4e build/default/production/sources/os/os.o
  .debug_pubtypes
-                  0x000ef6         0x12 build/default/production/sources/os/os_timer.o
+                  0x000eee         0x12 build/default/production/sources/os/os_timer.o
  .debug_pubtypes
-                  0x000f08         0x1f build/default/production/main.o
+                  0x000f00         0x1f build/default/production/main.o
  .debug_pubtypes
-                  0x000f27         0x3c build/default/production/main_tasks.o
+                  0x000f1f         0x3c build/default/production/main_tasks.o
 
 __c30_signature
-                  0x000f63         0x84
+                  0x000f5b         0x84
  __c30_signature
-                  0x000f63          0x6 build/default/production/sources/driver/PowerController/VCOMP.o
+                  0x000f5b          0x6 build/default/production/sources/driver/PowerController/VCOMP.o
  __c30_signature
-                  0x000f69          0x6 build/default/production/sources/driver/PowerController/BuckConverter.o
+                  0x000f61          0x6 build/default/production/sources/driver/PowerController/BuckConverter.o
  __c30_signature
-                  0x000f6f          0x6 build/default/production/mcc_generated_files/tmr1.o
+                  0x000f67          0x6 build/default/production/mcc_generated_files/tmr1.o
  __c30_signature
-                  0x000f75          0x6 build/default/production/mcc_generated_files/master.o
+                  0x000f6d          0x6 build/default/production/mcc_generated_files/master.o
  __c30_signature
-                  0x000f7b          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x000f73          0x6 build/default/production/mcc_generated_files/interrupt_manager.o
  __c30_signature
-                  0x000f81          0x6 build/default/production/mcc_generated_files/clock.o
+                  0x000f79          0x6 build/default/production/mcc_generated_files/clock.o
  __c30_signature
-                  0x000f87          0x6 build/default/production/mcc_generated_files/reset.o
+                  0x000f7f          0x6 build/default/production/mcc_generated_files/reset.o
  __c30_signature
-                  0x000f8d          0x6 build/default/production/mcc_generated_files/mcc.o
+                  0x000f85          0x6 build/default/production/mcc_generated_files/mcc.o
  __c30_signature
-                  0x000f93          0x6 build/default/production/mcc_generated_files/pin_manager.o
+                  0x000f8b          0x6 build/default/production/mcc_generated_files/pin_manager.o
  __c30_signature
-                  0x000f99          0x6 build/default/production/mcc_generated_files/traps.o
+                  0x000f91          0x6 build/default/production/mcc_generated_files/traps.o
  __c30_signature
-                  0x000f9f          0x6 build/default/production/mcc_generated_files/system.o
+                  0x000f97          0x6 build/default/production/mcc_generated_files/system.o
  __c30_signature
-                  0x000fa5          0x6 build/default/production/mcc_generated_files/adc1.o
+                  0x000f9d          0x6 build/default/production/mcc_generated_files/adc1.o
  __c30_signature
-                  0x000fab          0x6 build/default/production/mcc_generated_files/pwm.o
+                  0x000fa3          0x6 build/default/production/mcc_generated_files/pwm.o
  __c30_signature
-                  0x000fb1          0x6 build/default/production/sources/os/os_scheduler_100us.o
+                  0x000fa9          0x6 build/default/production/sources/os/os_scheduler_100us.o
  __c30_signature
-                  0x000fb7          0x6 build/default/production/sources/os/os_scheduler_1ms.o
+                  0x000faf          0x6 build/default/production/sources/os/os_scheduler_1ms.o
  __c30_signature
-                  0x000fbd          0x6 build/default/production/sources/os/os_sys_time.o
+                  0x000fb5          0x6 build/default/production/sources/os/os_sys_time.o
  __c30_signature
-                  0x000fc3          0x6 build/default/production/sources/os/os.o
+                  0x000fbb          0x6 build/default/production/sources/os/os.o
  __c30_signature
-                  0x000fc9          0x6 build/default/production/sources/os/os_timer.o
+                  0x000fc1          0x6 build/default/production/sources/os/os_timer.o
  __c30_signature
-                  0x000fcf          0x6 build/default/production/main.o
+                  0x000fc7          0x6 build/default/production/main.o
  __c30_signature
-                  0x000fd5          0x6 build/default/production/main_tasks.o
+                  0x000fcd          0x6 build/default/production/main_tasks.o
  __c30_signature
-                  0x000fdb          0x6 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt0_extendedch.o)
+                  0x000fd3          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(crt0_extendedch.o)
  __c30_signature
-                  0x000fe1          0x6 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(data_init_extendedch.o)
+                  0x000fd9          0x6 c:/program files/microchip/xc16/v2.00/bin/bin/../../lib\libc99-pic30-elf.a(data_init_extendedch.o)
 
-_0x110709b4064d74d4b
+_000000000ACC7B4064d9d45a
                     0x1000         0x1c
- _0x110709b4064d74d4b
+ _000000000ACC7B4064d9d45a
                     0x1000         0x1c build/default/production/sources/driver/PowerController/VCOMP.o
                     0x1000                  _VCOMP_coefficients
 
@@ -3119,107 +3119,107 @@ _0x110709b4064d74d4b
  .ivt._ADCAN1Interrupt
                     0x00cc          0x2 build/default/production/mcc_generated_files/adc1.o
 
-.text             0x00055a        0xba8
- .text            0x00055a        0x1f2 build/default/production/sources/driver/PowerController/VCOMP.o
+.text             0x00055a        0xcce
+ .text            0x00055a        0x2e2 build/default/production/sources/driver/PowerController/VCOMP.o
                   0x00055a                  _VCOMP_Initialize
- .text            0x00074c        0x1aa build/default/production/sources/driver/PowerController/BuckConverter.o
-                  0x00074c                  _VCOMP_ControlObject_Initialize
-                  0x0008d4                  _Buck_Softstart
- .text            0x0008f6        0x188 build/default/production/mcc_generated_files/adc1.o
-                  0x0008f6                  _ADC1_Initialize
-                  0x0009be                  _ADC1_Core0PowerEnable
-                  0x0009d4                  _ADC1_Core1PowerEnable
-                  0x0009ea                  _ADC1_SharedCorePowerEnable
-                  0x000a00                  _ADC1_CallBack
-                  0x000a06                  _ADC1_SetCommonInterruptHandler
-                  0x000a12                  _ADC1_Tasks
-                  0x000a2e                  _ADC1_channel_S1AN2_CallBack
-                  0x000a36                  _ADC1_Setchannel_S1AN2InterruptHandler
-                  0x000a42                  _ADC1_channel_S1AN19_CallBack
-                  0x000a4a                  _ADC1_Setchannel_S1AN19InterruptHandler
-                  0x000a56                  _ADC1_channel_S1AN20_CallBack
-                  0x000a5e                  _ADC1_Setchannel_S1AN20InterruptHandler
-                  0x000a6a                  _ADC1_VoutFB_CallBack
-                  0x000a72                  _ADC1_SetVoutFBInterruptHandler
- .text            0x000a7e        0x174 build/default/production/sources/driver/PowerController/VCOMP_asm.o
-                  0x000a7e                  _VCOMP_Update
-                  0x000b44                  _VCOMP_Reset
-                  0x000b60                  _VCOMP_Precharge
-                  0x000b84                  _VCOMP_PTermUpdate
- .text            0x000bf2        0x128 build/default/production/mcc_generated_files/pwm.o
-                  0x000bf2                  _PWM_Initialize
-                  0x000c64                  _PWM_Generator7_CallBack
-                  0x000c6a                  _PWM_Generator7_Tasks
-                  0x000c7e                  _PWM_EventA_CallBack
-                  0x000c84                  _PWM_EventA_Tasks
-                  0x000c98                  _PWM_EventB_CallBack
-                  0x000c9e                  _PWM_EventB_Tasks
-                  0x000cb2                  _PWM_EventC_CallBack
-                  0x000cb8                  _PWM_EventC_Tasks
-                  0x000ccc                  _PWM_EventD_CallBack
-                  0x000cd2                  _PWM_EventD_Tasks
-                  0x000ce6                  _PWM_EventE_CallBack
-                  0x000cec                  _PWM_EventE_Tasks
-                  0x000d00                  _PWM_EventF_CallBack
-                  0x000d06                  _PWM_EventF_Tasks
- .text            0x000d1a        0x114 build/default/production/mcc_generated_files/reset.o
-                  0x000d1a                  _RESET_GetCause
-                  0x000d22                  _RESET_CauseHandler
-                  0x000e26                  _RESET_CauseClearAll
- .text            0x000e2e        0x112 build/default/production/mcc_generated_files/master.o
-                  0x000e2e                  _MASTER_Initialize
-                  0x000e36                  _MASTER_InterruptRequestGenerate
-                  0x000e3e                  _MASTER_IsInterruptRequestAcknowledged
-                  0x000e56                  _MASTER_InterruptRequestComplete
-                  0x000e5e                  _MASTER_IsInterruptRequested
-                  0x000e76                  _MASTER_InterruptRequestAcknowledge
-                  0x000e7e                  _MASTER_InterruptRequestAcknowledgeComplete
-                  0x000e86                  _MASTER_SystemStatusGet
-                  0x000ece                  _MASTER_Read
-                  0x000f08                  _MASTER_Write
- .text            0x000f40         0xb8 build/default/production/mcc_generated_files/tmr1.o
-                  0x000f40                  _TMR1_Initialize
-                  0x000f64                  _TMR1_Period16BitSet
-                  0x000f76                  _TMR1_Period16BitGet
-                  0x000f7e                  _TMR1_Counter16BitSet
-                  0x000f90                  _TMR1_Counter16BitGet
-                  0x000f9e                  _TMR1_SetInterruptHandler
-                  0x000fae                  _TMR1_Start
-                  0x000fbe                  _TMR1_Stop
-                  0x000fc8                  _TMR1_GetElapsedThenClear
-                  0x000fe0                  _TMR1_SoftwareCounterGet
-                  0x000fec                  _TMR1_SoftwareCounterClear
- .text            0x000ff8         0x8e build/default/production/sources/os/os_scheduler_100us.o
-                  0x000ff8                  _OS_Scheduler_Init
-                  0x001002                  _TMR1_CallBack
-                  0x001022                  _OS_Scheduler_RunOnce
-                  0x00107c                  _OS_Scheduler_RunForever
- .text            0x001086         0x7c build/default/production/mcc_generated_files/clock.o
-                  0x001086                  _CLOCK_Initialize
-                  0x0010ea                  _CLOCK_AuxPllLockStatusGet
+ .text            0x00083c        0x1a8 build/default/production/sources/driver/PowerController/BuckConverter.o
+                  0x00083c                  _VCOMP_ControlObject_Initialize
+                  0x0009c2                  _Buck_Softstart
+ .text            0x0009e4        0x188 build/default/production/mcc_generated_files/adc1.o
+                  0x0009e4                  _ADC1_Initialize
+                  0x000aac                  _ADC1_Core0PowerEnable
+                  0x000ac2                  _ADC1_Core1PowerEnable
+                  0x000ad8                  _ADC1_SharedCorePowerEnable
+                  0x000aee                  _ADC1_CallBack
+                  0x000af4                  _ADC1_SetCommonInterruptHandler
+                  0x000b00                  _ADC1_Tasks
+                  0x000b1c                  _ADC1_channel_S1AN2_CallBack
+                  0x000b24                  _ADC1_Setchannel_S1AN2InterruptHandler
+                  0x000b30                  _ADC1_channel_S1AN19_CallBack
+                  0x000b38                  _ADC1_Setchannel_S1AN19InterruptHandler
+                  0x000b44                  _ADC1_channel_S1AN20_CallBack
+                  0x000b4c                  _ADC1_Setchannel_S1AN20InterruptHandler
+                  0x000b58                  _ADC1_VoutFB_CallBack
+                  0x000b60                  _ADC1_SetVoutFBInterruptHandler
+ .text            0x000b6c        0x174 build/default/production/sources/driver/PowerController/VCOMP_asm.o
+                  0x000b6c                  _VCOMP_Update
+                  0x000c32                  _VCOMP_Reset
+                  0x000c4e                  _VCOMP_Precharge
+                  0x000c72                  _VCOMP_PTermUpdate
+ .text            0x000ce0        0x132 build/default/production/mcc_generated_files/master.o
+                  0x000ce0                  _MASTER_Initialize
+                  0x000ce8                  _MASTER_InterruptRequestGenerate
+                  0x000cf0                  _MASTER_IsInterruptRequestAcknowledged
+                  0x000d08                  _MASTER_InterruptRequestComplete
+                  0x000d10                  _MASTER_IsInterruptRequested
+                  0x000d28                  _MASTER_InterruptRequestAcknowledge
+                  0x000d30                  _MASTER_InterruptRequestAcknowledgeComplete
+                  0x000d38                  _MASTER_SystemStatusGet
+                  0x000d80                  _MASTER_Read
+                  0x000dca                  _MASTER_Write
+ .text            0x000e12        0x12c build/default/production/mcc_generated_files/reset.o
+                  0x000e12                  _RESET_GetCause
+                  0x000e1a                  _RESET_CauseHandler
+                  0x000f36                  _RESET_CauseClearAll
+ .text            0x000f3e        0x128 build/default/production/mcc_generated_files/pwm.o
+                  0x000f3e                  _PWM_Initialize
+                  0x000fb0                  _PWM_Generator7_CallBack
+                  0x000fb6                  _PWM_Generator7_Tasks
+                  0x000fca                  _PWM_EventA_CallBack
+                  0x000fd0                  _PWM_EventA_Tasks
+                  0x000fe4                  _PWM_EventB_CallBack
+                  0x000fea                  _PWM_EventB_Tasks
+                  0x000ffe                  _PWM_EventC_CallBack
+                  0x001004                  _PWM_EventC_Tasks
+                  0x001018                  _PWM_EventD_CallBack
+                  0x00101e                  _PWM_EventD_Tasks
+                  0x001032                  _PWM_EventE_CallBack
+                  0x001038                  _PWM_EventE_Tasks
+                  0x00104c                  _PWM_EventF_CallBack
+                  0x001052                  _PWM_EventF_Tasks
+ .text            0x001066         0xb8 build/default/production/mcc_generated_files/tmr1.o
+                  0x001066                  _TMR1_Initialize
+                  0x00108a                  _TMR1_Period16BitSet
+                  0x00109c                  _TMR1_Period16BitGet
+                  0x0010a4                  _TMR1_Counter16BitSet
+                  0x0010b6                  _TMR1_Counter16BitGet
+                  0x0010c4                  _TMR1_SetInterruptHandler
+                  0x0010d4                  _TMR1_Start
+                  0x0010e4                  _TMR1_Stop
+                  0x0010ee                  _TMR1_GetElapsedThenClear
+                  0x001106                  _TMR1_SoftwareCounterGet
+                  0x001112                  _TMR1_SoftwareCounterClear
+ .text            0x00111e         0x8e build/default/production/sources/os/os_scheduler_100us.o
+                  0x00111e                  _OS_Scheduler_Init
+                  0x001128                  _TMR1_CallBack
+                  0x001148                  _OS_Scheduler_RunOnce
+                  0x0011a2                  _OS_Scheduler_RunForever
+ .text            0x0011ac         0x7c build/default/production/mcc_generated_files/clock.o
+                  0x0011ac                  _CLOCK_Initialize
+                  0x001210                  _CLOCK_AuxPllLockStatusGet
 
-.dinit            0x001102         0x76
- .dinit           0x001102         0x76 data_init
+.dinit            0x001228         0x76
+ .dinit           0x001228         0x76 data_init
 
-.text             0x001178        0x13c
- .text            0x001178         0x56 build/default/production/mcc_generated_files/pin_manager.o
-                  0x001178                  _PIN_MANAGER_Initialize
- .text            0x0011ce         0x4a build/default/production/main_tasks.o
-                  0x0011ce                  _Tasks_Realtime_100us
-                  0x0011d4                  _Tasks_Realtime_1ms
-                  0x0011da                  _Tasks_100us
-                  0x0011e0                  _Tasks_1ms
-                  0x0011e8                  _Tasks_10ms
-                  0x0011ee                  _Tasks_100ms
-                  0x0011f4                  _Tasks_1s
-                  0x001212                  _Tasks_Background
- .text            0x001218         0x38 build/default/production/mcc_generated_files/interrupt_manager.o
-                  0x001218                  _INTERRUPT_Initialize
- .text            0x001250         0x38 build/default/production/mcc_generated_files/system.o
-                  0x00126e                  _SYSTEM_Initialize
- .text            0x001288         0x18 build/default/production/mcc_generated_files/traps.o
-                  0x001288                  _TRAPS_halt_on_error
- .text            0x0012a0          0xc build/default/production/main.o
-                  0x0012a0                  _main
- .text            0x0012ac          0x8 build/default/production/sources/os/os.o
-                  0x0012ac                  _OS_Init
+.text             0x00129e        0x13c
+ .text            0x00129e         0x56 build/default/production/mcc_generated_files/pin_manager.o
+                  0x00129e                  _PIN_MANAGER_Initialize
+ .text            0x0012f4         0x4a build/default/production/main_tasks.o
+                  0x0012f4                  _Tasks_Realtime_100us
+                  0x0012fa                  _Tasks_Realtime_1ms
+                  0x001300                  _Tasks_100us
+                  0x001306                  _Tasks_1ms
+                  0x00130e                  _Tasks_10ms
+                  0x001314                  _Tasks_100ms
+                  0x00131a                  _Tasks_1s
+                  0x001338                  _Tasks_Background
+ .text            0x00133e         0x38 build/default/production/mcc_generated_files/interrupt_manager.o
+                  0x00133e                  _INTERRUPT_Initialize
+ .text            0x001376         0x38 build/default/production/mcc_generated_files/system.o
+                  0x001394                  _SYSTEM_Initialize
+ .text            0x0013ae         0x18 build/default/production/mcc_generated_files/traps.o
+                  0x0013ae                  _TRAPS_halt_on_error
+ .text            0x0013c6          0xc build/default/production/main.o
+                  0x0013c6                  _main
+ .text            0x0013d2          0x8 build/default/production/sources/os/os.o
+                  0x0013d2                  _OS_Init
