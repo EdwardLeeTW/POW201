@@ -9,14 +9,14 @@
  *  Sampling Frequency: 250000 Hz
  *  Fixed Point Format: Q15
  *  Scaling Mode:       4 - Fast Floating Point Coefficient Scaling
- *  Input Gain:         4
+ *  Input Gain:         0.204
  *
  * *********************************************************************************
  * CGS Version:         3.0.11
  * CGS Date:            01/06/2022
  * *********************************************************************************
  * User:                edwardlee
- * Date/Time:           08/14/2023 17:49:07
+ * Date/Time:           08/14/2023 20:32:16
  * ********************************************************************************/
 
 // This is a guard condition so that contents of this file are not included

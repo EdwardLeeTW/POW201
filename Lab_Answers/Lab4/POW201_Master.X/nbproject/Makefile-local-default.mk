@@ -33,4 +33,4 @@ MP_CC_DIR="/Applications/microchip/xc16/v2.10/bin"
 MP_AS_DIR="/Applications/microchip/xc16/v2.10/bin"
 MP_LD_DIR="/Applications/microchip/xc16/v2.10/bin"
 MP_AR_DIR="/Applications/microchip/xc16/v2.10/bin"
-DFP_DIR=/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.13.356
+DFP_DIR=/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352

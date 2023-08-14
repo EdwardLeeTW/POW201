@@ -9,14 +9,14 @@
  *  Sampling Frequency: 250000 Hz
  *  Fixed Point Format: Q15
  *  Scaling Mode:       4 - Fast Floating Point Coefficient Scaling
- *  Input Gain:         4
+ *  Input Gain:         0.204
  *
  * *********************************************************************************
  * CGS Version:         3.0.11
  * CGS Date:            01/06/2022
  * *********************************************************************************
  * User:                edwardlee
- * Date/Time:           08/14/2023 17:49:06
+ * Date/Time:           08/14/2023 20:32:16
  * ********************************************************************************/
 
 #include "VCOMP.h"
@@ -52,7 +52,7 @@ volatile uint16_t VCOMP_ErrorHistory_size = (sizeof(VCOMP_histories.ErrorHistory
  *
  *    fP0:    1670 Hz
  *    fP1:    2700 Hz
- *    fP2:    250000 Hz
+ *    fP2:    125000 Hz
  *    fZ1:    2300 Hz
  *    fZ2:    2300 Hz
  *
@@ -62,17 +62,17 @@ volatile uint16_t VCOMP_ErrorHistory_size = (sizeof(VCOMP_histories.ErrorHistory
 
 volatile int32_t VCOMP_ACoefficients [3] =
 {
-    0x5AB5FFFF, // Coefficient A1 will be multiplied with controller output u(n-1)
-    0x43770003, // Coefficient A2 will be multiplied with controller output u(n-2)
-    0x84500001  // Coefficient A3 will be multiplied with controller output u(n-3)
+    0x6D97FFFF, // Coefficient A1 will be multiplied with controller output u(n-1)
+    0xBF610000, // Coefficient A2 will be multiplied with controller output u(n-2)
+    0x95C80002  // Coefficient A3 will be multiplied with controller output u(n-3)
 };
 
 volatile int32_t VCOMP_BCoefficients [4] =
 {
-    0x54C20002, // Coefficient B0 will be multiplied with error input e(n-0)
-    0xB4C50002, // Coefficient B1 will be multiplied with error input e(n-1)
-    0xAB840002, // Coefficient B2 will be multiplied with error input e(n-2)
-    0x4B800002  // Coefficient B3 will be multiplied with error input e(n-3)
+    0x53ABFFFE, // Coefficient B0 will be multiplied with error input e(n-0)
+    0xB5BDFFFE, // Coefficient B1 will be multiplied with error input e(n-1)
+    0xAC9AFFFE, // Coefficient B2 will be multiplied with error input e(n-2)
+    0x4A88FFFE  // Coefficient B3 will be multiplied with error input e(n-3)
 };
 
 // Coefficient normalization factors
@@ -82,8 +82,8 @@ volatile int16_t VCOMP_post_shift_B = 0;          // Bit-shift value B used to p
 volatile fractional VCOMP_post_scaler = 0x0000;   // Q15 fractional factor used to perform control output value backward normalization
 
 // P-Term Coefficient for Plant Measurements
-volatile int16_t VCOMP_pterm_factor = 0x7FFF;     // Q15 fractional of the P-Term factor
-volatile int16_t VCOMP_pterm_scaler = 0x0000;     // Bit-shift scaler of the P-Term factor
+volatile int16_t VCOMP_pterm_factor = 0x4B40;     // Q15 fractional of the P-Term factor
+volatile int16_t VCOMP_pterm_scaler = 0xFFFD;     // Bit-shift scaler of the P-Term factor
 
 
 // User-defined NPNZ16b_s controller data object

@@ -97,7 +97,7 @@
         <platform>4</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.13.356"/>
+        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.12.352"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

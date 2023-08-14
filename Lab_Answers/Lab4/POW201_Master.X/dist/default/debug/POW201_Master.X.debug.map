@@ -4,20 +4,20 @@ Tool Name:
   /Applications/microchip/xc16/v2.10/bin/bin/../bin/elf-ld
 
 Command:
-  -T/tmp/tmp00000716.00 \
-  -T/tmp/tmp00000716.01 \
-  -T/tmp/tmp00000716.02 \
-  -T/tmp/tmp00000716.03 \
-  -T/tmp/tmp00000716.04 \
-  -T/tmp/tmp00000716.05 \
-  -T/tmp/tmp00000716.06 \
+  -T/tmp/tmp00001129.00 \
+  -T/tmp/tmp00001129.01 \
+  -T/tmp/tmp00001129.02 \
+  -T/tmp/tmp00001129.03 \
+  -T/tmp/tmp00001129.04 \
+  -T/tmp/tmp00001129.05 \
+  -T/tmp/tmp00001129.06 \
   -p33CH512MP508 \
-  --mdfp=/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.13.356/xc16 \
+  --mdfp=/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16 \
   -o \
   dist/default/debug/POW201_Master.X.debug.elf \
   -L/Applications/microchip/xc16/v2.10/bin/bin/.. \
-  -L/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.13.356/xc16/bin/../lib \
-  -L/Users/edwardlee/.mchp_packs/Microchip/dsPIC33CH-MP_DFP/1.13.356/xc16/bin/../support/dsPIC33C/gld \
+  -L/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16/bin/../lib \
+  -L/Applications/microchip/mplabx/v6.10/packs/Microchip/dsPIC33CH-MP_DFP/1.12.352/xc16/bin/../support/dsPIC33C/gld \
   -L/Applications/microchip/xc16/v2.10/bin/bin/../../lib \
   -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/PIC24E/gld \
   -L/Applications/microchip/xc16/v2.10/bin/bin/../../support/PIC24F/gld \
@@ -116,14 +116,14 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200               0x498           0x6e4  (1764)
-POW201_Slave_image           0x698              0x12ac          0x1c02  (7170)
-.text                       0x1944               0x854           0xc7e  (3198)
-.dinit                      0x2198                0x2e            0x45  (69)
-.text                       0x21c6                0x4e            0x75  (117)
-data_init_dualch.S.scn1     0x2214                 0x2             0x3  (3)
+.text                        0x200               0x494           0x6de  (1758)
+POW201_Slave_image           0x694              0x1270          0x1ba8  (7080)
+.text                       0x1904               0x83c           0xc5a  (3162)
+.dinit                      0x2140                0x2e            0x45  (69)
+.text                       0x216e                0x4a            0x6f  (111)
+data_init_dualch.S.scn1     0x21b8                 0x2             0x3  (3)
 
-                 Total "program" memory used (bytes):         0x3021  (12321) 2%
+                 Total "program" memory used (bytes):         0x2f97  (12183) 2%
 
 
 "data" Memory  [Origin = 0x1000, Length = 0xc000]
@@ -183,155 +183,155 @@ External Symbols in Program Memory (by address):
                   0x00038a                  __stop_slave
                   0x00038a                  __stop_secondary
                   0x0003b6                  __ADCAN0Interrupt
-                  0x000408                  __OscillatorFail
-                  0x000428                  __StackError
-                  0x00044a                  __AddressError
-                  0x00046a                  __MathError
-                  0x00048a                  __HardTrapError
-                  0x0004aa                  __SoftTrapError
-                  0x0004f4                  __T1Interrupt
-                  0x000692                  __DefaultInterrupt
-                  0x000698                  _POW201_Slave
-                  0x001944                  _ADC1_Initialize
-                  0x001a08                  _ADC1_SharedCorePowerEnable
-                  0x001a24                  _ADC1_SetCommonInterruptHandler
-                  0x001a54                  _ADC1_SetPOTInterruptHandler
-                  0x001a68                  _ADC1_Setchannel_AN16InterruptHandler
-                  0x001a7c                  _ADC1_Setchannel_AN17InterruptHandler
-                  0x001a90                  _ADC1_Setchannel_AN18InterruptHandler
-                  0x001aa4                  _ADC1_Setchannel_AN19InterruptHandler
-                  0x001ab8                  _ADC1_Setchannel_AN20InterruptHandler
-                  0x001ac4                  _SLAVE1_Initialize
-                  0x001ad0                  _SLAVE1_Start
-                  0x001ad8                  _SLAVE1_Program
-                  0x001aea                  _SLAVE1_InterruptRequestGenerate
-                  0x001af2                  _SLAVE1_IsInterruptRequestAcknowledged
-                  0x001b0a                  _SLAVE1_InterruptRequestComplete
-                  0x001b12                  _SLAVE1_IsInterruptRequested
-                  0x001b2a                  _SLAVE1_InterruptRequestAcknowledge
-                  0x001b32                  _SLAVE1_InterruptRequestAcknowledgeComplete
-                  0x001b3a                  _SLAVE1_GetResetCause
-                  0x001b56                  _SLAVE1_ResetCauseClear
-                  0x001b6c                  _SLAVE1_SystemStatusGet
-                  0x001bb4                  _SLAVE1_Read
-                  0x001bec                  _SLAVE1_Write
-                  0x001c26                  _RESET_GetCause
-                  0x001d4a                  _RESET_CauseClearAll
-                  0x001d52                  _PWM_Initialize
-                  0x001dca                  _PWM_Generator4_Tasks
-                  0x001de4                  _PWM_EventA_Tasks
-                  0x001dfe                  _PWM_EventB_Tasks
-                  0x001e18                  _PWM_EventC_Tasks
-                  0x001e32                  _PWM_EventD_Tasks
-                  0x001e4c                  _PWM_EventE_Tasks
-                  0x001e66                  _PWM_EventF_Tasks
-                  0x001e7a                  _TMR1_Initialize
-                  0x001e9e                  _TMR1_Period16BitSet
-                  0x001eb0                  _TMR1_Period16BitGet
-                  0x001eb8                  _TMR1_Counter16BitSet
-                  0x001eca                  _TMR1_Counter16BitGet
-                  0x001ed8                  _TMR1_SetInterruptHandler
-                  0x001ee8                  _TMR1_Start
-                  0x001ef8                  _TMR1_Stop
-                  0x001f02                  _TMR1_GetElapsedThenClear
-                  0x001f1a                  _TMR1_SoftwareCounterGet
-                  0x001f26                  _TMR1_SoftwareCounterClear
-                  0x001f32                  _OS_Scheduler_Init
-                  0x001f3c                  _TMR1_CallBack
-                  0x001f5c                  _OS_Scheduler_RunOnce
-                  0x001fb6                  _OS_Scheduler_RunForever
-                  0x001fc0                  _CLOCK_Initialize
-                  0x00202a                  _CLOCK_AuxPllLockStatusGet
-                  0x002042                  _PIN_MANAGER_Initialize
-                  0x0020bc                  _Tasks_Realtime_100us
-                  0x0020c2                  _Tasks_Realtime_1ms
-                  0x0020c8                  _Tasks_100us
-                  0x0020de                  _Tasks_1ms
-                  0x0020e4                  _Tasks_10ms
-                  0x0020ea                  _Tasks_100ms
-                  0x0020f0                  _Tasks_1s
-                  0x00210c                  _Tasks_Background
-                  0x002112                  _INTERRUPT_Initialize
-                  0x00217e                  _SYSTEM_Initialize
-                  0x0021fe                  _main
-                  0x00220c                  _OS_Init
+                  0x000404                  __OscillatorFail
+                  0x000424                  __StackError
+                  0x000446                  __AddressError
+                  0x000466                  __MathError
+                  0x000486                  __HardTrapError
+                  0x0004a6                  __SoftTrapError
+                  0x0004f0                  __T1Interrupt
+                  0x00068e                  __DefaultInterrupt
+                  0x000694                  _POW201_Slave
+                  0x001904                  _ADC1_Initialize
+                  0x0019c8                  _ADC1_SharedCorePowerEnable
+                  0x0019e4                  _ADC1_SetCommonInterruptHandler
+                  0x001a14                  _ADC1_SetPOTInterruptHandler
+                  0x001a28                  _ADC1_Setchannel_AN16InterruptHandler
+                  0x001a3c                  _ADC1_Setchannel_AN17InterruptHandler
+                  0x001a50                  _ADC1_Setchannel_AN18InterruptHandler
+                  0x001a64                  _ADC1_Setchannel_AN19InterruptHandler
+                  0x001a78                  _ADC1_Setchannel_AN20InterruptHandler
+                  0x001a84                  _SLAVE1_Initialize
+                  0x001a90                  _SLAVE1_Start
+                  0x001a98                  _SLAVE1_Program
+                  0x001aaa                  _SLAVE1_InterruptRequestGenerate
+                  0x001ab2                  _SLAVE1_IsInterruptRequestAcknowledged
+                  0x001aca                  _SLAVE1_InterruptRequestComplete
+                  0x001ad2                  _SLAVE1_IsInterruptRequested
+                  0x001aea                  _SLAVE1_InterruptRequestAcknowledge
+                  0x001af2                  _SLAVE1_InterruptRequestAcknowledgeComplete
+                  0x001afa                  _SLAVE1_GetResetCause
+                  0x001b16                  _SLAVE1_ResetCauseClear
+                  0x001b2c                  _SLAVE1_SystemStatusGet
+                  0x001b74                  _SLAVE1_Read
+                  0x001bac                  _SLAVE1_Write
+                  0x001be6                  _PWM_Initialize
+                  0x001c5e                  _PWM_Generator4_Tasks
+                  0x001c78                  _PWM_EventA_Tasks
+                  0x001c92                  _PWM_EventB_Tasks
+                  0x001cac                  _PWM_EventC_Tasks
+                  0x001cc6                  _PWM_EventD_Tasks
+                  0x001ce0                  _PWM_EventE_Tasks
+                  0x001cfa                  _PWM_EventF_Tasks
+                  0x001d0e                  _RESET_GetCause
+                  0x001e1a                  _RESET_CauseClearAll
+                  0x001e22                  _TMR1_Initialize
+                  0x001e46                  _TMR1_Period16BitSet
+                  0x001e58                  _TMR1_Period16BitGet
+                  0x001e60                  _TMR1_Counter16BitSet
+                  0x001e72                  _TMR1_Counter16BitGet
+                  0x001e80                  _TMR1_SetInterruptHandler
+                  0x001e90                  _TMR1_Start
+                  0x001ea0                  _TMR1_Stop
+                  0x001eaa                  _TMR1_GetElapsedThenClear
+                  0x001ec2                  _TMR1_SoftwareCounterGet
+                  0x001ece                  _TMR1_SoftwareCounterClear
+                  0x001eda                  _OS_Scheduler_Init
+                  0x001ee4                  _TMR1_CallBack
+                  0x001f04                  _OS_Scheduler_RunOnce
+                  0x001f5e                  _OS_Scheduler_RunForever
+                  0x001f68                  _CLOCK_Initialize
+                  0x001fd2                  _CLOCK_AuxPllLockStatusGet
+                  0x001fea                  _PIN_MANAGER_Initialize
+                  0x002064                  _Tasks_Realtime_100us
+                  0x00206a                  _Tasks_Realtime_1ms
+                  0x002070                  _Tasks_100us
+                  0x002086                  _Tasks_1ms
+                  0x00208c                  _Tasks_10ms
+                  0x002092                  _Tasks_100ms
+                  0x002098                  _Tasks_1s
+                  0x0020b4                  _Tasks_Background
+                  0x0020ba                  _INTERRUPT_Initialize
+                  0x002126                  _SYSTEM_Initialize
+                  0x0021a2                  _main
+                  0x0021b0                  _OS_Init
                   0x057f00                  __FSEC.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x001944                  _ADC1_Initialize
-                  0x001a24                  _ADC1_SetCommonInterruptHandler
-                  0x001a54                  _ADC1_SetPOTInterruptHandler
-                  0x001a68                  _ADC1_Setchannel_AN16InterruptHandler
-                  0x001a7c                  _ADC1_Setchannel_AN17InterruptHandler
-                  0x001a90                  _ADC1_Setchannel_AN18InterruptHandler
-                  0x001aa4                  _ADC1_Setchannel_AN19InterruptHandler
-                  0x001ab8                  _ADC1_Setchannel_AN20InterruptHandler
-                  0x001a08                  _ADC1_SharedCorePowerEnable
-                  0x00202a                  _CLOCK_AuxPllLockStatusGet
-                  0x001fc0                  _CLOCK_Initialize
-                  0x002112                  _INTERRUPT_Initialize
-                  0x00220c                  _OS_Init
-                  0x001f32                  _OS_Scheduler_Init
-                  0x001fb6                  _OS_Scheduler_RunForever
-                  0x001f5c                  _OS_Scheduler_RunOnce
-                  0x002042                  _PIN_MANAGER_Initialize
-                  0x000698                  _POW201_Slave
-                  0x001de4                  _PWM_EventA_Tasks
-                  0x001dfe                  _PWM_EventB_Tasks
-                  0x001e18                  _PWM_EventC_Tasks
-                  0x001e32                  _PWM_EventD_Tasks
-                  0x001e4c                  _PWM_EventE_Tasks
-                  0x001e66                  _PWM_EventF_Tasks
-                  0x001dca                  _PWM_Generator4_Tasks
-                  0x001d52                  _PWM_Initialize
-                  0x001d4a                  _RESET_CauseClearAll
-                  0x001c26                  _RESET_GetCause
-                  0x001b3a                  _SLAVE1_GetResetCause
-                  0x001ac4                  _SLAVE1_Initialize
-                  0x001b2a                  _SLAVE1_InterruptRequestAcknowledge
-                  0x001b32                  _SLAVE1_InterruptRequestAcknowledgeComplete
-                  0x001b0a                  _SLAVE1_InterruptRequestComplete
-                  0x001aea                  _SLAVE1_InterruptRequestGenerate
-                  0x001af2                  _SLAVE1_IsInterruptRequestAcknowledged
-                  0x001b12                  _SLAVE1_IsInterruptRequested
-                  0x001ad8                  _SLAVE1_Program
-                  0x001bb4                  _SLAVE1_Read
-                  0x001b56                  _SLAVE1_ResetCauseClear
-                  0x001ad0                  _SLAVE1_Start
-                  0x001b6c                  _SLAVE1_SystemStatusGet
-                  0x001bec                  _SLAVE1_Write
-                  0x00217e                  _SYSTEM_Initialize
-                  0x001f3c                  _TMR1_CallBack
-                  0x001eca                  _TMR1_Counter16BitGet
-                  0x001eb8                  _TMR1_Counter16BitSet
-                  0x001f02                  _TMR1_GetElapsedThenClear
-                  0x001e7a                  _TMR1_Initialize
-                  0x001eb0                  _TMR1_Period16BitGet
-                  0x001e9e                  _TMR1_Period16BitSet
-                  0x001ed8                  _TMR1_SetInterruptHandler
-                  0x001f26                  _TMR1_SoftwareCounterClear
-                  0x001f1a                  _TMR1_SoftwareCounterGet
-                  0x001ee8                  _TMR1_Start
-                  0x001ef8                  _TMR1_Stop
-                  0x0020ea                  _Tasks_100ms
-                  0x0020c8                  _Tasks_100us
-                  0x0020e4                  _Tasks_10ms
-                  0x0020de                  _Tasks_1ms
-                  0x0020f0                  _Tasks_1s
-                  0x00210c                  _Tasks_Background
-                  0x0020bc                  _Tasks_Realtime_100us
-                  0x0020c2                  _Tasks_Realtime_1ms
+                  0x001904                  _ADC1_Initialize
+                  0x0019e4                  _ADC1_SetCommonInterruptHandler
+                  0x001a14                  _ADC1_SetPOTInterruptHandler
+                  0x001a28                  _ADC1_Setchannel_AN16InterruptHandler
+                  0x001a3c                  _ADC1_Setchannel_AN17InterruptHandler
+                  0x001a50                  _ADC1_Setchannel_AN18InterruptHandler
+                  0x001a64                  _ADC1_Setchannel_AN19InterruptHandler
+                  0x001a78                  _ADC1_Setchannel_AN20InterruptHandler
+                  0x0019c8                  _ADC1_SharedCorePowerEnable
+                  0x001fd2                  _CLOCK_AuxPllLockStatusGet
+                  0x001f68                  _CLOCK_Initialize
+                  0x0020ba                  _INTERRUPT_Initialize
+                  0x0021b0                  _OS_Init
+                  0x001eda                  _OS_Scheduler_Init
+                  0x001f5e                  _OS_Scheduler_RunForever
+                  0x001f04                  _OS_Scheduler_RunOnce
+                  0x001fea                  _PIN_MANAGER_Initialize
+                  0x000694                  _POW201_Slave
+                  0x001c78                  _PWM_EventA_Tasks
+                  0x001c92                  _PWM_EventB_Tasks
+                  0x001cac                  _PWM_EventC_Tasks
+                  0x001cc6                  _PWM_EventD_Tasks
+                  0x001ce0                  _PWM_EventE_Tasks
+                  0x001cfa                  _PWM_EventF_Tasks
+                  0x001c5e                  _PWM_Generator4_Tasks
+                  0x001be6                  _PWM_Initialize
+                  0x001e1a                  _RESET_CauseClearAll
+                  0x001d0e                  _RESET_GetCause
+                  0x001afa                  _SLAVE1_GetResetCause
+                  0x001a84                  _SLAVE1_Initialize
+                  0x001aea                  _SLAVE1_InterruptRequestAcknowledge
+                  0x001af2                  _SLAVE1_InterruptRequestAcknowledgeComplete
+                  0x001aca                  _SLAVE1_InterruptRequestComplete
+                  0x001aaa                  _SLAVE1_InterruptRequestGenerate
+                  0x001ab2                  _SLAVE1_IsInterruptRequestAcknowledged
+                  0x001ad2                  _SLAVE1_IsInterruptRequested
+                  0x001a98                  _SLAVE1_Program
+                  0x001b74                  _SLAVE1_Read
+                  0x001b16                  _SLAVE1_ResetCauseClear
+                  0x001a90                  _SLAVE1_Start
+                  0x001b2c                  _SLAVE1_SystemStatusGet
+                  0x001bac                  _SLAVE1_Write
+                  0x002126                  _SYSTEM_Initialize
+                  0x001ee4                  _TMR1_CallBack
+                  0x001e72                  _TMR1_Counter16BitGet
+                  0x001e60                  _TMR1_Counter16BitSet
+                  0x001eaa                  _TMR1_GetElapsedThenClear
+                  0x001e22                  _TMR1_Initialize
+                  0x001e58                  _TMR1_Period16BitGet
+                  0x001e46                  _TMR1_Period16BitSet
+                  0x001e80                  _TMR1_SetInterruptHandler
+                  0x001ece                  _TMR1_SoftwareCounterClear
+                  0x001ec2                  _TMR1_SoftwareCounterGet
+                  0x001e90                  _TMR1_Start
+                  0x001ea0                  _TMR1_Stop
+                  0x002092                  _Tasks_100ms
+                  0x002070                  _Tasks_100us
+                  0x00208c                  _Tasks_10ms
+                  0x002086                  _Tasks_1ms
+                  0x002098                  _Tasks_1s
+                  0x0020b4                  _Tasks_Background
+                  0x002064                  _Tasks_Realtime_100us
+                  0x00206a                  _Tasks_Realtime_1ms
                   0x0003b6                  __ADCAN0Interrupt
-                  0x00044a                  __AddressError
-                  0x000692                  __DefaultInterrupt
+                  0x000446                  __AddressError
+                  0x00068e                  __DefaultInterrupt
                   0x057f00                  __FSEC.sec
-                  0x00048a                  __HardTrapError
-                  0x00046a                  __MathError
-                  0x000408                  __OscillatorFail
-                  0x0004aa                  __SoftTrapError
-                  0x000428                  __StackError
-                  0x0004f4                  __T1Interrupt
+                  0x000486                  __HardTrapError
+                  0x000466                  __MathError
+                  0x000404                  __OscillatorFail
+                  0x0004a6                  __SoftTrapError
+                  0x000424                  __StackError
+                  0x0004f0                  __T1Interrupt
                   0x000246                  __data_init
                   0x000246                  __data_init_duo
                   0x00032e                  __program_inactive_secondary
@@ -345,7 +345,7 @@ External Symbols in Program Memory (by name):
                   0x00038a                  __stop_secondary
                   0x00038a                  __stop_slave
                   0x0002f8                  __wipe_secondary
-                  0x0021fe                  _main
+                  0x0021a2                  _main
 
 Memory Configuration
 
@@ -512,7 +512,7 @@ LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200        0x498
+.text             0x000200        0x494
  *(.init)
  .init            0x000200         0x46 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt0_dualch.o)
                   0x000200                  __reset
@@ -532,34 +532,34 @@ LOAD /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libfx-elf.a
  *(.handle)
  .handle          0x000396         0x20 jump_table
  *(.isr*)
- .isr.text        0x0003b6         0x52 build/default/debug/sources/driver/drv_adc.o
+ .isr.text        0x0003b6         0x4e build/default/debug/sources/driver/drv_adc.o
                   0x0003b6                  __ADCAN0Interrupt
  .isrerror_handler
-                  0x000408         0xec build/default/debug/mcc_generated_files/traps.o
-                  0x000408                  __OscillatorFail
-                  0x000428                  __StackError
-                  0x00044a                  __AddressError
-                  0x00046a                  __MathError
-                  0x00048a                  __HardTrapError
-                  0x0004aa                  __SoftTrapError
- .isr.text        0x0004f4         0x36 build/default/debug/mcc_generated_files/tmr1.o
-                  0x0004f4                  __T1Interrupt
- .isr.text        0x00052a        0x168 build/default/debug/mcc_generated_files/adc1.o
-                  0x000566                  __ADCAN16Interrupt
-                  0x0005a2                  __ADCAN17Interrupt
-                  0x0005de                  __ADCAN18Interrupt
-                  0x00061a                  __ADCAN19Interrupt
-                  0x000656                  __ADCAN20Interrupt
- .isr             0x000692          0x4 default_isr
-                  0x000692                  __DefaultInterrupt
+                  0x000404         0xec build/default/debug/mcc_generated_files/traps.o
+                  0x000404                  __OscillatorFail
+                  0x000424                  __StackError
+                  0x000446                  __AddressError
+                  0x000466                  __MathError
+                  0x000486                  __HardTrapError
+                  0x0004a6                  __SoftTrapError
+ .isr.text        0x0004f0         0x36 build/default/debug/mcc_generated_files/tmr1.o
+                  0x0004f0                  __T1Interrupt
+ .isr.text        0x000526        0x168 build/default/debug/mcc_generated_files/adc1.o
+                  0x000562                  __ADCAN16Interrupt
+                  0x00059e                  __ADCAN17Interrupt
+                  0x0005da                  __ADCAN18Interrupt
+                  0x000616                  __ADCAN19Interrupt
+                  0x000652                  __ADCAN20Interrupt
+ .isr             0x00068e          0x4 default_isr
+                  0x00068e                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000696          0x2 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
-                  0x000696                  __crt_start_mode_normal
-                  0x000696                  __crt_start_mode
+                  0x000692          0x2 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(crt_start_mode_normalch.Meo)
+                  0x000692                  __crt_start_mode_normal
+                  0x000692                  __crt_start_mode
 
 usercode
  *(usercode)
@@ -683,26 +683,26 @@ __FBTSEQ
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x97b2
+.debug_info       0x000000       0x977f
  *(.debug_info)
- .debug_info      0x000000        0xa89 build/default/debug/sources/driver/drv_adc.o
- .debug_info      0x000a89        0x5b6 build/default/debug/mcc_generated_files/pin_manager.o
- .debug_info      0x00103f       0x10a6 build/default/debug/mcc_generated_files/pwm.o
- .debug_info      0x0020e5        0x407 build/default/debug/mcc_generated_files/interrupt_manager.o
- .debug_info      0x0024ec        0x637 build/default/debug/mcc_generated_files/traps.o
- .debug_info      0x002b23        0x8a5 build/default/debug/mcc_generated_files/tmr1.o
- .debug_info      0x0033c8        0x6b7 build/default/debug/mcc_generated_files/clock.o
- .debug_info      0x003a7f       0x2041 build/default/debug/mcc_generated_files/adc1.o
- .debug_info      0x005ac0       0x1b99 build/default/debug/mcc_generated_files/system.o
- .debug_info      0x007659        0x49d build/default/debug/mcc_generated_files/reset.o
- .debug_info      0x007af6        0x9e6 build/default/debug/mcc_generated_files/slave1.o
- .debug_info      0x0084dc        0x492 build/default/debug/sources/os/os_scheduler_100us.o
- .debug_info      0x00896e        0x13b build/default/debug/sources/os/os_scheduler_1ms.o
- .debug_info      0x008aa9        0x136 build/default/debug/sources/os/os_sys_time.o
- .debug_info      0x008bdf        0x25d build/default/debug/sources/os/os.o
- .debug_info      0x008e3c        0x133 build/default/debug/sources/os/os_timer.o
- .debug_info      0x008f6f        0x171 build/default/debug/main.o
- .debug_info      0x0090e0        0x6d2 build/default/debug/main_tasks.o
+ .debug_info      0x000000        0xa87 build/default/debug/sources/driver/drv_adc.o
+ .debug_info      0x000a87        0x5b4 build/default/debug/mcc_generated_files/pin_manager.o
+ .debug_info      0x00103b       0x10a4 build/default/debug/mcc_generated_files/pwm.o
+ .debug_info      0x0020df        0x405 build/default/debug/mcc_generated_files/interrupt_manager.o
+ .debug_info      0x0024e4        0x635 build/default/debug/mcc_generated_files/traps.o
+ .debug_info      0x002b19        0x8a3 build/default/debug/mcc_generated_files/tmr1.o
+ .debug_info      0x0033bc        0x6b5 build/default/debug/mcc_generated_files/clock.o
+ .debug_info      0x003a71       0x203f build/default/debug/mcc_generated_files/adc1.o
+ .debug_info      0x005ab0       0x1b97 build/default/debug/mcc_generated_files/system.o
+ .debug_info      0x007647        0x49b build/default/debug/mcc_generated_files/reset.o
+ .debug_info      0x007ae2        0x9d5 build/default/debug/mcc_generated_files/slave1.o
+ .debug_info      0x0084b7        0x490 build/default/debug/sources/os/os_scheduler_100us.o
+ .debug_info      0x008947        0x139 build/default/debug/sources/os/os_scheduler_1ms.o
+ .debug_info      0x008a80        0x134 build/default/debug/sources/os/os_sys_time.o
+ .debug_info      0x008bb4        0x25b build/default/debug/sources/os/os.o
+ .debug_info      0x008e0f        0x131 build/default/debug/sources/os/os_timer.o
+ .debug_info      0x008f40        0x16f build/default/debug/main.o
+ .debug_info      0x0090af        0x6d0 build/default/debug/main_tasks.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xdd4
@@ -727,7 +727,7 @@ __FBTSEQ
  .debug_abbrev    0x000cde         0x5b build/default/debug/main.o
  .debug_abbrev    0x000d39         0x9b build/default/debug/main_tasks.o
 
-.debug_line       0x000000       0x1481
+.debug_line       0x000000       0x147e
  *(.debug_line)
  .debug_line      0x000000        0x163 build/default/debug/sources/driver/drv_adc.o
  .debug_line      0x000163         0x1a build/default/debug/mcc_generated_files/mcc.o
@@ -740,14 +740,14 @@ __FBTSEQ
  .debug_line      0x000944        0x1df build/default/debug/mcc_generated_files/adc1.o
  .debug_line      0x000b23        0x165 build/default/debug/mcc_generated_files/system.o
  .debug_line      0x000c88        0x162 build/default/debug/mcc_generated_files/reset.o
- .debug_line      0x000dea        0x1db build/default/debug/mcc_generated_files/slave1.o
- .debug_line      0x000fc5        0x141 build/default/debug/sources/os/os_scheduler_100us.o
- .debug_line      0x001106         0x1a build/default/debug/sources/os/os_scheduler_1ms.o
- .debug_line      0x001120         0x1a build/default/debug/sources/os/os_sys_time.o
- .debug_line      0x00113a        0x10b build/default/debug/sources/os/os.o
- .debug_line      0x001245         0x1a build/default/debug/sources/os/os_timer.o
- .debug_line      0x00125f        0x106 build/default/debug/main.o
- .debug_line      0x001365        0x11c build/default/debug/main_tasks.o
+ .debug_line      0x000dea        0x1d8 build/default/debug/mcc_generated_files/slave1.o
+ .debug_line      0x000fc2        0x141 build/default/debug/sources/os/os_scheduler_100us.o
+ .debug_line      0x001103         0x1a build/default/debug/sources/os/os_scheduler_1ms.o
+ .debug_line      0x00111d         0x1a build/default/debug/sources/os/os_sys_time.o
+ .debug_line      0x001137        0x10b build/default/debug/sources/os/os.o
+ .debug_line      0x001242         0x1a build/default/debug/sources/os/os_timer.o
+ .debug_line      0x00125c        0x106 build/default/debug/main.o
+ .debug_line      0x001362        0x11c build/default/debug/main_tasks.o
 
 .debug_frame      0x000000        0xe20
  *(.debug_frame)
@@ -4632,114 +4632,114 @@ __c30_signature
                   0x057f48          0x2 build/default/debug/mcc_generated_files/slave1.o
 
 POW201_Slave_image
-                  0x000698       0x12ac
+                  0x000694       0x1270
  POW201_Slave_image
-                  0x000698       0x12ac build/default/debug/POW201_Slave.o
-                  0x000698                  _POW201_Slave
+                  0x000694       0x1270 build/default/debug/POW201_Slave.o
+                  0x000694                  _POW201_Slave
 
-.text             0x001944        0x854
- .text            0x001944        0x180 build/default/debug/mcc_generated_files/adc1.o
-                  0x001944                  _ADC1_Initialize
-                  0x001a08                  _ADC1_SharedCorePowerEnable
-                  0x001a1e                  _ADC1_CallBack
-                  0x001a24                  _ADC1_SetCommonInterruptHandler
-                  0x001a30                  _ADC1_Tasks
-                  0x001a4c                  _ADC1_POT_CallBack
-                  0x001a54                  _ADC1_SetPOTInterruptHandler
-                  0x001a60                  _ADC1_channel_AN16_CallBack
-                  0x001a68                  _ADC1_Setchannel_AN16InterruptHandler
-                  0x001a74                  _ADC1_channel_AN17_CallBack
-                  0x001a7c                  _ADC1_Setchannel_AN17InterruptHandler
-                  0x001a88                  _ADC1_channel_AN18_CallBack
-                  0x001a90                  _ADC1_Setchannel_AN18InterruptHandler
-                  0x001a9c                  _ADC1_channel_AN19_CallBack
-                  0x001aa4                  _ADC1_Setchannel_AN19InterruptHandler
-                  0x001ab0                  _ADC1_channel_AN20_CallBack
-                  0x001ab8                  _ADC1_Setchannel_AN20InterruptHandler
- .text            0x001ac4        0x162 build/default/debug/mcc_generated_files/slave1.o
-                  0x001ac4                  _SLAVE1_Initialize
-                  0x001ad0                  _SLAVE1_Start
-                  0x001ad8                  _SLAVE1_Program
-                  0x001aea                  _SLAVE1_InterruptRequestGenerate
-                  0x001af2                  _SLAVE1_IsInterruptRequestAcknowledged
-                  0x001b0a                  _SLAVE1_InterruptRequestComplete
-                  0x001b12                  _SLAVE1_IsInterruptRequested
-                  0x001b2a                  _SLAVE1_InterruptRequestAcknowledge
-                  0x001b32                  _SLAVE1_InterruptRequestAcknowledgeComplete
-                  0x001b3a                  _SLAVE1_GetResetCause
-                  0x001b56                  _SLAVE1_ResetCauseClear
-                  0x001b6c                  _SLAVE1_SystemStatusGet
-                  0x001bb4                  _SLAVE1_Read
-                  0x001bec                  _SLAVE1_Write
- .text            0x001c26        0x12c build/default/debug/mcc_generated_files/reset.o
-                  0x001c26                  _RESET_GetCause
-                  0x001c2e                  _RESET_CauseHandler
-                  0x001d4a                  _RESET_CauseClearAll
- .text            0x001d52        0x128 build/default/debug/mcc_generated_files/pwm.o
-                  0x001d52                  _PWM_Initialize
-                  0x001dc4                  _PWM_Generator4_CallBack
-                  0x001dca                  _PWM_Generator4_Tasks
-                  0x001dde                  _PWM_EventA_CallBack
-                  0x001de4                  _PWM_EventA_Tasks
-                  0x001df8                  _PWM_EventB_CallBack
-                  0x001dfe                  _PWM_EventB_Tasks
-                  0x001e12                  _PWM_EventC_CallBack
-                  0x001e18                  _PWM_EventC_Tasks
-                  0x001e2c                  _PWM_EventD_CallBack
-                  0x001e32                  _PWM_EventD_Tasks
-                  0x001e46                  _PWM_EventE_CallBack
-                  0x001e4c                  _PWM_EventE_Tasks
-                  0x001e60                  _PWM_EventF_CallBack
-                  0x001e66                  _PWM_EventF_Tasks
- .text            0x001e7a         0xb8 build/default/debug/mcc_generated_files/tmr1.o
-                  0x001e7a                  _TMR1_Initialize
-                  0x001e9e                  _TMR1_Period16BitSet
-                  0x001eb0                  _TMR1_Period16BitGet
-                  0x001eb8                  _TMR1_Counter16BitSet
-                  0x001eca                  _TMR1_Counter16BitGet
-                  0x001ed8                  _TMR1_SetInterruptHandler
-                  0x001ee8                  _TMR1_Start
-                  0x001ef8                  _TMR1_Stop
-                  0x001f02                  _TMR1_GetElapsedThenClear
-                  0x001f1a                  _TMR1_SoftwareCounterGet
-                  0x001f26                  _TMR1_SoftwareCounterClear
- .text            0x001f32         0x8e build/default/debug/sources/os/os_scheduler_100us.o
-                  0x001f32                  _OS_Scheduler_Init
-                  0x001f3c                  _TMR1_CallBack
-                  0x001f5c                  _OS_Scheduler_RunOnce
-                  0x001fb6                  _OS_Scheduler_RunForever
- .text            0x001fc0         0x82 build/default/debug/mcc_generated_files/clock.o
-                  0x001fc0                  _CLOCK_Initialize
-                  0x00202a                  _CLOCK_AuxPllLockStatusGet
- .text            0x002042         0x7a build/default/debug/mcc_generated_files/pin_manager.o
-                  0x002042                  _PIN_MANAGER_Initialize
- .text            0x0020bc         0x56 build/default/debug/main_tasks.o
-                  0x0020bc                  _Tasks_Realtime_100us
-                  0x0020c2                  _Tasks_Realtime_1ms
-                  0x0020c8                  _Tasks_100us
-                  0x0020de                  _Tasks_1ms
-                  0x0020e4                  _Tasks_10ms
-                  0x0020ea                  _Tasks_100ms
-                  0x0020f0                  _Tasks_1s
-                  0x00210c                  _Tasks_Background
- .text            0x002112         0x4e build/default/debug/mcc_generated_files/interrupt_manager.o
-                  0x002112                  _INTERRUPT_Initialize
- .text            0x002160         0x38 build/default/debug/mcc_generated_files/system.o
-                  0x00217e                  _SYSTEM_Initialize
+.text             0x001904        0x83c
+ .text            0x001904        0x180 build/default/debug/mcc_generated_files/adc1.o
+                  0x001904                  _ADC1_Initialize
+                  0x0019c8                  _ADC1_SharedCorePowerEnable
+                  0x0019de                  _ADC1_CallBack
+                  0x0019e4                  _ADC1_SetCommonInterruptHandler
+                  0x0019f0                  _ADC1_Tasks
+                  0x001a0c                  _ADC1_POT_CallBack
+                  0x001a14                  _ADC1_SetPOTInterruptHandler
+                  0x001a20                  _ADC1_channel_AN16_CallBack
+                  0x001a28                  _ADC1_Setchannel_AN16InterruptHandler
+                  0x001a34                  _ADC1_channel_AN17_CallBack
+                  0x001a3c                  _ADC1_Setchannel_AN17InterruptHandler
+                  0x001a48                  _ADC1_channel_AN18_CallBack
+                  0x001a50                  _ADC1_Setchannel_AN18InterruptHandler
+                  0x001a5c                  _ADC1_channel_AN19_CallBack
+                  0x001a64                  _ADC1_Setchannel_AN19InterruptHandler
+                  0x001a70                  _ADC1_channel_AN20_CallBack
+                  0x001a78                  _ADC1_Setchannel_AN20InterruptHandler
+ .text            0x001a84        0x162 build/default/debug/mcc_generated_files/slave1.o
+                  0x001a84                  _SLAVE1_Initialize
+                  0x001a90                  _SLAVE1_Start
+                  0x001a98                  _SLAVE1_Program
+                  0x001aaa                  _SLAVE1_InterruptRequestGenerate
+                  0x001ab2                  _SLAVE1_IsInterruptRequestAcknowledged
+                  0x001aca                  _SLAVE1_InterruptRequestComplete
+                  0x001ad2                  _SLAVE1_IsInterruptRequested
+                  0x001aea                  _SLAVE1_InterruptRequestAcknowledge
+                  0x001af2                  _SLAVE1_InterruptRequestAcknowledgeComplete
+                  0x001afa                  _SLAVE1_GetResetCause
+                  0x001b16                  _SLAVE1_ResetCauseClear
+                  0x001b2c                  _SLAVE1_SystemStatusGet
+                  0x001b74                  _SLAVE1_Read
+                  0x001bac                  _SLAVE1_Write
+ .text            0x001be6        0x128 build/default/debug/mcc_generated_files/pwm.o
+                  0x001be6                  _PWM_Initialize
+                  0x001c58                  _PWM_Generator4_CallBack
+                  0x001c5e                  _PWM_Generator4_Tasks
+                  0x001c72                  _PWM_EventA_CallBack
+                  0x001c78                  _PWM_EventA_Tasks
+                  0x001c8c                  _PWM_EventB_CallBack
+                  0x001c92                  _PWM_EventB_Tasks
+                  0x001ca6                  _PWM_EventC_CallBack
+                  0x001cac                  _PWM_EventC_Tasks
+                  0x001cc0                  _PWM_EventD_CallBack
+                  0x001cc6                  _PWM_EventD_Tasks
+                  0x001cda                  _PWM_EventE_CallBack
+                  0x001ce0                  _PWM_EventE_Tasks
+                  0x001cf4                  _PWM_EventF_CallBack
+                  0x001cfa                  _PWM_EventF_Tasks
+ .text            0x001d0e        0x114 build/default/debug/mcc_generated_files/reset.o
+                  0x001d0e                  _RESET_GetCause
+                  0x001d16                  _RESET_CauseHandler
+                  0x001e1a                  _RESET_CauseClearAll
+ .text            0x001e22         0xb8 build/default/debug/mcc_generated_files/tmr1.o
+                  0x001e22                  _TMR1_Initialize
+                  0x001e46                  _TMR1_Period16BitSet
+                  0x001e58                  _TMR1_Period16BitGet
+                  0x001e60                  _TMR1_Counter16BitSet
+                  0x001e72                  _TMR1_Counter16BitGet
+                  0x001e80                  _TMR1_SetInterruptHandler
+                  0x001e90                  _TMR1_Start
+                  0x001ea0                  _TMR1_Stop
+                  0x001eaa                  _TMR1_GetElapsedThenClear
+                  0x001ec2                  _TMR1_SoftwareCounterGet
+                  0x001ece                  _TMR1_SoftwareCounterClear
+ .text            0x001eda         0x8e build/default/debug/sources/os/os_scheduler_100us.o
+                  0x001eda                  _OS_Scheduler_Init
+                  0x001ee4                  _TMR1_CallBack
+                  0x001f04                  _OS_Scheduler_RunOnce
+                  0x001f5e                  _OS_Scheduler_RunForever
+ .text            0x001f68         0x82 build/default/debug/mcc_generated_files/clock.o
+                  0x001f68                  _CLOCK_Initialize
+                  0x001fd2                  _CLOCK_AuxPllLockStatusGet
+ .text            0x001fea         0x7a build/default/debug/mcc_generated_files/pin_manager.o
+                  0x001fea                  _PIN_MANAGER_Initialize
+ .text            0x002064         0x56 build/default/debug/main_tasks.o
+                  0x002064                  _Tasks_Realtime_100us
+                  0x00206a                  _Tasks_Realtime_1ms
+                  0x002070                  _Tasks_100us
+                  0x002086                  _Tasks_1ms
+                  0x00208c                  _Tasks_10ms
+                  0x002092                  _Tasks_100ms
+                  0x002098                  _Tasks_1s
+                  0x0020b4                  _Tasks_Background
+ .text            0x0020ba         0x4e build/default/debug/mcc_generated_files/interrupt_manager.o
+                  0x0020ba                  _INTERRUPT_Initialize
+ .text            0x002108         0x38 build/default/debug/mcc_generated_files/system.o
+                  0x002126                  _SYSTEM_Initialize
 
-.dinit            0x002198         0x2e
- .dinit           0x002198         0x2e data_init
+.dinit            0x002140         0x2e
+ .dinit           0x002140         0x2e data_init
 
-.text             0x0021c6         0x4e
- .text            0x0021c6         0x1e build/default/debug/sources/driver/drv_adc.o
- .text            0x0021e4         0x1a build/default/debug/mcc_generated_files/traps.o
-                  0x0021e4                  _TRAPS_halt_on_error
- .text            0x0021fe          0xe build/default/debug/main.o
-                  0x0021fe                  _main
- .text            0x00220c          0x8 build/default/debug/sources/os/os.o
-                  0x00220c                  _OS_Init
+.text             0x00216e         0x4a
+ .text            0x00216e         0x1a build/default/debug/sources/driver/drv_adc.o
+ .text            0x002188         0x1a build/default/debug/mcc_generated_files/traps.o
+                  0x002188                  _TRAPS_halt_on_error
+ .text            0x0021a2          0xe build/default/debug/main.o
+                  0x0021a2                  _main
+ .text            0x0021b0          0x8 build/default/debug/sources/os/os.o
+                  0x0021b0                  _OS_Init
 
 data_init_dualch.S.scn1
-                  0x002214          0x2
+                  0x0021b8          0x2
  data_init_dualch.S.scn1
-                  0x002214          0x2 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(data_init_dualch.o)
+                  0x0021b8          0x2 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(data_init_dualch.o)
