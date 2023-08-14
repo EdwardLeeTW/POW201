@@ -93,11 +93,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>PKOBSKDEPlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>2.00</languageToolchainVersion>
+        <languageToolchainVersion>2.10</languageToolchainVersion>
         <platform>4</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.12.352"/>
+        <pack name="dsPIC33CH-MP_DFP" vendor="Microchip" version="1.13.356"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
