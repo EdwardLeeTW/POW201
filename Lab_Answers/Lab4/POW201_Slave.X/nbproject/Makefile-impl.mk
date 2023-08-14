@@ -69,4 +69,4 @@ ALLCONFS=default
 #	fi
 # build subordinate image
 .build-sub-images-impl:
-		${MAKE} -f nbproject/Makefile-${CONF}.mk SUBPROJECTS=${SUBPROJECTS} .create-sub-image SUB_IMAGE_NAME=${SUB_IMAGE_NAME} SUB_IMAGE_ADDRESS=${SUB_IMAGE_ADDRESS}
+		${MAKE} -f nbproject/Makefile-${CONF}.mk SUBPROJECTS=${SUBPROJECTS} .create-sub-image SUB_IMAGE_NAME=${SUB_IMAGE_NAME} SUB_IMAGE_ADDRESS=${SUB_IMAGE_ADDRESS} SUB_IMAGE_COPY_MODE="${SUB_IMAGE_COPY_MODE}"
