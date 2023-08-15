@@ -2,7 +2,7 @@
 ;  SDK Version: PowerSmart Digital Control Library Designer v1.9.15.709
 ;  CGS Version: Code Generator Script v3.0.11 (01/06/2022)
 ;  Author:      edwardlee
-;  Date/Time:   08/14/2023 20:32:16
+;  Date/Time:   08/15/2023 11:17:28
 ; **********************************************************************************
 ;  3P3Z Control Library File (Fast Floating Point Coefficient Scaling Mode)
 ; **********************************************************************************

@@ -98,7 +98,7 @@ section                    address   length (PC units)   length (bytes) (dec)
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-_0x110126b4064da1ed7        0x1000                   0            0x1c  (28)
+_0x10c512b4064daee55        0x1000                   0            0x1c  (28)
 .ndata                      0x101c                   0             0xe  (14)
 .nbss                       0x102a                   0            0x22  (34)
 .ndata                      0x104c                   0             0x2  (2)
@@ -3007,9 +3007,9 @@ __c30_signature
  __c30_signature
                   0x000fe1          0x6 /Applications/microchip/xc16/v2.10/bin/bin/../../lib/libc99-pic30-elf.a(data_init_extendedch.o)
 
-_0x110126b4064da1ed7
+_0x10c512b4064daee55
                     0x1000         0x1c
- _0x110126b4064da1ed7
+ _0x10c512b4064daee55
                     0x1000         0x1c build/default/production/sources/driver/PowerController/VCOMP.o
                     0x1000                  _VCOMP_coefficients
 

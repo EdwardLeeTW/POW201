@@ -16,7 +16,7 @@
  * CGS Date:            01/06/2022
  * *********************************************************************************
  * User:                edwardlee
- * Date/Time:           08/14/2023 20:32:16
+ * Date/Time:           08/15/2023 11:17:28
  * ********************************************************************************/
 
 #include "VCOMP.h"
@@ -50,7 +50,7 @@ volatile uint16_t VCOMP_ErrorHistory_size = (sizeof(VCOMP_histories.ErrorHistory
  * Pole&Zero Placement:
  * *********************************************************************************
  *
- *    fP0:    1670 Hz
+ *    fP0:    1320 Hz
  *    fP1:    2700 Hz
  *    fP2:    125000 Hz
  *    fZ1:    2300 Hz
@@ -69,10 +69,10 @@ volatile int32_t VCOMP_ACoefficients [3] =
 
 volatile int32_t VCOMP_BCoefficients [4] =
 {
-    0x53ABFFFE, // Coefficient B0 will be multiplied with error input e(n-0)
-    0xB5BDFFFE, // Coefficient B1 will be multiplied with error input e(n-1)
-    0xAC9AFFFE, // Coefficient B2 will be multiplied with error input e(n-2)
-    0x4A88FFFE  // Coefficient B3 will be multiplied with error input e(n-3)
+    0x4222FFFE, // Coefficient B0 will be multiplied with error input e(n-0)
+    0x8A9AFFFF, // Coefficient B1 will be multiplied with error input e(n-1)
+    0xBE14FFFE, // Coefficient B2 will be multiplied with error input e(n-2)
+    0x75D2FFFF  // Coefficient B3 will be multiplied with error input e(n-3)
 };
 
 // Coefficient normalization factors
