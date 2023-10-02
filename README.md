@@ -22,7 +22,7 @@ The hand-on example code for RTC POW201 was integrated the dsPIC33C Framework fo
 
 ## Version Description
 
-- v1.0 (Aug 2, 2023)
+- v1.0 (Aug 15, 2023)
 
 - - -
 
